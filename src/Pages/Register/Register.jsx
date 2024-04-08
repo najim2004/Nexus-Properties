@@ -1,11 +1,180 @@
-import React from 'react';
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import Navbar from "../../Shared/Navbar/Navbar";
+import { useContext, useEffect } from "react";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { updateProfile } from "firebase/auth";
 
 const Register = () => {
-    return (
-        <div>
-            
+  const { user, loading, registerUser, sweetAlert } = useContext(AuthContext);
+  const location = useLocation();
+  const navigator = useNavigate();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
+
+  useEffect(() => {
+    if (user) {
+      if (location?.state) {
+        navigator(location.state);
+      } else {
+        navigator("/");
+      }
+    }
+  }, [user, loading]);
+
+  const fromSubmit = (data) => {
+    const { Name, Photo, Email, password } = data;
+    registerUser(Email, password)
+      .then((userCredentials) => {
+        updateProfile(userCredentials.user, {
+          displayName: Name,
+          photoURL: Photo ? Photo : "",
+        })
+          .then(() => {
+            sweetAlert(
+              "Successfully Registered",
+              "success",
+              false,
+              false,
+              3000
+            );
+            reset();
+            setTimeout(() => {
+              if (location?.state) {
+                navigator(location.state);
+              } else {
+                navigator("/");
+              }
+            }, 3000);
+          })
+          .catch((error) => {
+            console.log(error);
+            sweetAlert("Oops!", "warning", "Something went wrong", true, false);
+          });
+      })
+      .catch((error) => {
+        if (error.code === "auth/email-already-in-use") {
+          sweetAlert(
+            "Oops!",
+            "warning",
+            "Email already in Register",
+            true,
+            false
+          );
+        } else {
+          sweetAlert("Oops!", "warning", "Something went wrong", true, false);
+        }
+        console.log(error);
+      });
+  };
+  return (
+    <div className="">
+      <Navbar></Navbar>
+      <div className="h-[calc(100vh-108px)] p-3 w-screen flex items-center justify-center">
+        <div className="w-full shadow-2xl max-w-md p-8 space-y-3  border-[1px] border-purple-200 rounded-xl dark:bg-gray-50 dark:text-gray-800">
+          <h1 className="text-2xl font-bold text-center">Register Now</h1>
+
+          {/* ................. from start here .................. */}
+          <form onSubmit={handleSubmit(fromSubmit)} className="space-y-6">
+            <div className="space-y-1 text-sm">
+              <label className="block dark:text-gray-600">Full Name</label>
+              <input
+                name="Name"
+                {...register("Name", {
+                  required: true,
+                })}
+                type="text"
+                placeholder="Full Name"
+                className="w-full px-4 py-3 rounded-md border-gray-300 border-[1px] dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
+              />
+            </div>
+            <div className="space-y-1 text-sm">
+              <label className="block dark:text-gray-600">Photo Url</label>
+              <input
+                name="photo"
+                {...register("Photo")}
+                type="text"
+                placeholder="Photo"
+                className="w-full px-4 py-3 rounded-md border-gray-300 border-[1px] dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
+              />
+            </div>
+            <div className="space-y-1 text-sm">
+              <label className="block dark:text-gray-600">Email</label>
+              <input
+                name="email"
+                {...register("Email", {
+                  required: true,
+                  pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                })}
+                type="text"
+                placeholder="Email"
+                className="w-full px-4 py-3 rounded-md border-gray-300 border-[1px] dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
+              />
+              {errors?.Email?.type === "required" && (
+                <p className="text-red-500 dark:text-red-400">
+                  This filed is required!
+                </p>
+              )}
+              {errors?.Email?.type === "pattern" && (
+                <p className="text-red-500 dark:text-red-400">
+                  Please enter a valid email!
+                </p>
+              )}
+            </div>
+            <div className="space-y-1 text-sm">
+              <label htmlFor="password" className="block dark:text-gray-600">
+                Password
+              </label>
+              <input
+                {...register("password", {
+                  required: true,
+                  minLength: 6,
+                  pattern: /^(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d!@#$%^&*]+$/,
+                })}
+                type="password"
+                name="password"
+                placeholder="Password"
+                className="w-full px-4 py-3 rounded-md border-gray-300 border-[1px] dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
+              />
+              {errors?.password?.type === "required" && (
+                <p className="text-red-500 dark:text-red-400">
+                  This filed is required!
+                </p>
+              )}
+              {errors?.password?.type === "minLength" && (
+                <p className="text-red-500 dark:text-red-400">
+                  Password must be at least 6 characters!
+                </p>
+              )}
+              {errors?.password?.type === "pattern" && (
+                <p className="text-red-500 dark:text-red-400">
+                  Password must have at least one Uppercase letter, Lowercase
+                  letter,
+                </p>
+              )}
+            </div>
+            <input
+              type="submit"
+              value="Register"
+              className="w-full btn p-3 text-center rounded-sm dark:text-gray-50 dark:bg-violet-600"
+            />
+          </form>
+          {/* ................. from end here .................. */}
+          <p className="text-xs text-center sm:px-6 dark:text-gray-600">
+            Already have an account?
+            <Link className="hover:underline" to={"/login"}>
+              {" "}
+              Login
+            </Link>
+          </p>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default Register;
