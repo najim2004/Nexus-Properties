@@ -13,12 +13,12 @@ const UpdateProfile = () => {
   } = useForm();
   const handleUpdateProfile = (data) => {};
   return (
-    <div className="bg-[#ebeeef]">
+    <div className="bg-[white]">
       <Navbar></Navbar>
       <div className="max-w-[1300px] h-[calc(100vh-78px)] lg:h-[calc(100vh-108px)] flex items-center mx-auto">
-        <div className="bg-white mx-2 lg:p-12 p-6 md:p-8 w-[900px] md:mx-auto Lg:mx-auto min-h-[550px] rounded-2xl">
+        <div className="bg-[#1e1e1e0b] mx-2 lg:p-12 p-6 md:p-8 w-[900px] md:mx-auto Lg:mx-auto min-h-[550px] rounded-2xl">
           <div className="mb-10">
-            <h3 className="text-[#b4c1d4] font-semibold">
+            <h3 className=" font-semibold">
               Update Your Profile
             </h3>
             <hr className="h-[1px] bg-gray-400 mt-5" />
