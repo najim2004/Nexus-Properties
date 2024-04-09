@@ -35,7 +35,7 @@ const Navbar = () => {
             to={"/"}
             className="btn btn-ghost text-xl md:text-2xl lg:text-3xl"
           >
-            Home Haven
+            Nexus Properties
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -43,11 +43,11 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
           {user ? (
-            <div
-              className="tooltip tooltip-left"
-              data-tip={user?.displayName.toUpperCase()}
-            >
-              <div className="dropdown dropdown-end">
+            <div className="flex gap-3 items-center">
+              <div
+                data-tip={user?.displayName.toUpperCase()}
+                className="tooltip tooltip-left dropdown dropdown-end"
+              >
                 <div
                   tabIndex={0}
                   role="button"
@@ -74,6 +74,7 @@ const Navbar = () => {
                   )}
                 </ul>
               </div>
+              <button onClick={handleLogOut} className="hidden lg:flex text-sm font-semibold btn-sm btn">Logout</button>
             </div>
           ) : (
             <Link to={"/login"}>

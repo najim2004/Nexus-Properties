@@ -3,6 +3,7 @@ import {
   onAuthStateChanged,
   signInWithEmailAndPassword,
   signOut,
+  updateProfile,
 } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import { auth } from "../Firebase/Firebase.config";
@@ -40,6 +41,13 @@ const AuthProvider = ({ children }) => {
     return signOut(auth);
   };
 
+  const updateUserProfile = (Name, photo) => {
+    return updateProfile(user, {
+      displayName: Name,
+      photoURL: photo ? photo : "",
+    });
+  };
+
   const sweetAlert = (title, icon, text, btn, time) => {
     return Swal.fire({
       icon: icon,
@@ -67,6 +75,7 @@ const AuthProvider = ({ children }) => {
     logOutUser,
     sweetAlert,
     sweetLoginAlert,
+    updateUserProfile,
   };
   return (
     <AuthContext.Provider value={contextData}>{children}</AuthContext.Provider>

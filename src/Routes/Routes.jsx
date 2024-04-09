@@ -5,11 +5,13 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import PrivateRoute from "./PrivateRoute";
 import UpdateProfile from "../Pages/UpdateProfile/UpdateProfile";
+import Page404 from "../Pages/404/Page404";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
+    errorElement: <Page404></Page404>,
     children: [
       {
         path: "/",
