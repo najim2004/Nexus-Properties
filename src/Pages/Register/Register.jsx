@@ -1,13 +1,15 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import Navbar from "../../Shared/Navbar/Navbar";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { updateProfile } from "firebase/auth";
+import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 
 const Register = () => {
   const { user, loading, registerUser, sweetAlert } = useContext(AuthContext);
   const location = useLocation();
+  const [pSH, setPSH] = useState(true);
   const navigator = useNavigate();
   const {
     register,
@@ -65,16 +67,23 @@ const Register = () => {
             true,
             false
           );
+        } else if (error.code === "auth/network-request-failed") {
+          sweetAlert(
+            false,
+            "warning",
+            "Network request failed! Please check network and try again!",
+            true,
+            false
+          );
         } else {
           sweetAlert("Oops!", "warning", "Something went wrong", true, false);
         }
-        console.log(error);
       });
   };
   return (
     <div className="">
       <Navbar></Navbar>
-      <div className="h-[calc(100vh-108px)] p-3 w-screen flex items-center justify-center">
+      <div className="h-[calc(100vh-108px)]  p-3 w-screen flex items-center justify-center">
         <div className="w-full shadow-2xl max-w-md p-8 space-y-3  border-[1px] border-purple-200 rounded-xl dark:bg-gray-50 dark:text-gray-800">
           <h1 className="text-2xl font-bold text-center">Register Now</h1>
 
@@ -125,7 +134,7 @@ const Register = () => {
                 </p>
               )}
             </div>
-            <div className="space-y-1 text-sm">
+            <div className="relative space-y-1 text-sm">
               <label htmlFor="password" className="block dark:text-gray-600">
                 Password
               </label>
@@ -135,11 +144,17 @@ const Register = () => {
                   minLength: 6,
                   pattern: /^(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d!@#$%^&*]+$/,
                 })}
-                type="password"
+                type={pSH ? "password" : "text"}
                 name="password"
                 placeholder="Password"
                 className="w-full px-4 py-3 rounded-md border-gray-300 border-[1px] dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
               />
+              <span
+                onClick={() => setPSH(!pSH)}
+                className="absolute right-3 top-[24px] size-[40px] flex items-center justify-center text-[24px]"
+              >
+                {pSH ? <AiFillEye /> : <AiFillEyeInvisible />}
+              </span>
               {errors?.password?.type === "required" && (
                 <p className="text-red-500 dark:text-red-400">
                   This filed is required!

@@ -1,11 +1,28 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import Navbar from "../../Shared/Navbar/Navbar";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
-
+import emoji from "../../assets/emoji.png";
+import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 const Login = () => {
-  const { user, loading, loginUser, sweetAlert } = useContext(AuthContext);
+  const { user, loading, loginUser, sweetAlert, sweetLoginAlert } =
+    useContext(AuthContext);
+
+  const location = useLocation();
+  const navigator = useNavigate();
+  const [pSH, setPSH] = useState(true);
+
+  useEffect(() => {
+    if (user) {
+      if (location?.state) {
+        navigator(location.state);
+      } else {
+        navigator("/");
+      }
+    }
+  }, [user, loading]);
+
   const {
     register,
     handleSubmit,
@@ -16,7 +33,41 @@ const Login = () => {
   const fromSubmit = (data) => {
     const { Email, password } = data;
     loginUser(Email, password)
-    .then()
+      .then((currentUser) => {
+        sweetLoginAlert(
+          `Welcome Back Dear "${currentUser?.user?.displayName.toUpperCase()}"`,
+          emoji,
+          1500
+        );
+        setTimeout(() => {
+          if (location?.state) {
+            navigator(location.state);
+          } else {
+            navigator("/");
+          }
+        }, 1500);
+      })
+      .catch((error) => {
+        if (error.code === "auth/invalid-credential") {
+          sweetAlert(
+            "Oops!",
+            "warning",
+            "Invalid email or password!!",
+            true,
+            false
+          );
+        } else if (error.code === "auth/network-request-failed") {
+          sweetAlert(
+            false,
+            "warning",
+            "Network request failed! Please check network and try again!",
+            true,
+            false
+          );
+        } else {
+          sweetAlert("Oops!", "warning", "Something went wrong", true, false);
+        }
+      });
   };
   return (
     <div className="">
@@ -49,7 +100,7 @@ const Login = () => {
                 </p>
               )}
             </div>
-            <div className="space-y-1 text-sm">
+            <div className="relative space-y-1 text-sm">
               <label htmlFor="password" className="block dark:text-gray-600">
                 Password
               </label>
@@ -58,11 +109,17 @@ const Login = () => {
                   required: true,
                   minLength: 8,
                 })}
-                type="password"
+                type={pSH?"password":"text"}
                 name="password"
                 placeholder="Password"
                 className="w-full px-4 py-3 rounded-md border-gray-300 border-[1px] dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
               />
+              <span
+                onClick={() => setPSH(!pSH)}
+                className="absolute right-3 top-[24px] size-[40px] flex items-center justify-center text-[24px]"
+              >
+                {pSH ? <AiFillEye /> : <AiFillEyeInvisible />}
+              </span>
               {errors?.password?.type === "required" && (
                 <p className="text-red-500 dark:text-red-400">
                   This filed is required!

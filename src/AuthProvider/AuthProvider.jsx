@@ -49,6 +49,15 @@ const AuthProvider = ({ children }) => {
       timer: time,
     });
   };
+  const sweetLoginAlert = (title, img, time) => {
+    return Swal.fire({
+      imageUrl: img,
+      imageWidth: 150,
+      title: title,
+      timer: time,
+      showConfirmButton: false,
+    });
+  };
 
   const contextData = {
     user,
@@ -57,6 +66,7 @@ const AuthProvider = ({ children }) => {
     loginUser,
     logOutUser,
     sweetAlert,
+    sweetLoginAlert,
   };
   return (
     <AuthContext.Provider value={contextData}>{children}</AuthContext.Provider>

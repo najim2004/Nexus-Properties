@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
-import userImg from "../../assets/user.png"
+import userImg from "../../assets/user.png";
 
 const Navbar = () => {
   const { user, logOutUser, sweetAlert } = useContext(AuthContext);
@@ -24,53 +24,56 @@ const Navbar = () => {
     logOutUser()
       .then(() => {})
       .catch(() => {
-        sweetAlert("Oops!", "warning", "Something went wrong", true , false);
+        sweetAlert("Oops!", "warning", "Something went wrong", true, false);
       });
   };
   return (
-    <div className="max-w-[1300px] mx-auto mt-3 md:mt-5 lg:mt-10">
-      <div className="navbar bg-base-100">
+    <div className="max-w-[1300px] mx-auto pt-3 md:pt-5 lg:pt-10">
+      <div className="navbar ">
         <div className="navbar-start">
-          <a className="btn btn-ghost text-xl md:text-2xl lg:text-3xl">
+          <Link
+            to={"/"}
+            className="btn btn-ghost text-xl md:text-2xl lg:text-3xl"
+          >
             Home Haven
-          </a>
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{menu}</ul>
         </div>
         <div className="navbar-end">
           {user ? (
-            <div className="dropdown dropdown-end">
-              <div
-                tabIndex={0}
-                role="button"
-                className="btn btn-ghost btn-circle avatar"
-              >
-                <div className="w-10 rounded-full">
-                  <img
-                    alt="Tailwind CSS Navbar component"
-                    src={user?.photoURL?user.photoURL:userImg}
-                  />
+            <div
+              className="tooltip tooltip-left"
+              data-tip={user?.displayName.toUpperCase()}
+            >
+              <div className="dropdown dropdown-end">
+                <div
+                  tabIndex={0}
+                  role="button"
+                  className="btn btn-ghost btn-circle avatar"
+                >
+                  <div className="w-10 rounded-full">
+                    <img
+                      alt="Tailwind CSS Navbar component"
+                      src={user?.photoURL ? user.photoURL : userImg}
+                    />
+                  </div>
                 </div>
-              </div>
-              <ul
-                tabIndex={0}
-                className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
-              >
-                <li>
-                  <Link to={"/profile"} className="justify-between">
-                    Profile
-                  </Link>
-                </li>
-                <li>
-                  <Link to={"/update-profile"}>Update Profile</Link>
-                </li>
-                {user && (
-                  <li onClick={handleLogOut}>
-                    <a>Logout</a>
+                <ul
+                  tabIndex={0}
+                  className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
+                >
+                  <li>
+                    <NavLink to={"/update-profile"}>Update Profile</NavLink>
                   </li>
-                )}
-              </ul>
+                  {user && (
+                    <li onClick={handleLogOut}>
+                      <a>Logout</a>
+                    </li>
+                  )}
+                </ul>
+              </div>
             </div>
           ) : (
             <Link to={"/login"}>
@@ -100,6 +103,15 @@ const Navbar = () => {
             className="menu menu-sm right-0 dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
             {menu}
+            {user ? (
+              <li onClick={handleLogOut}>
+                <a>Logout</a>
+              </li>
+            ) : (
+              <li>
+                <Link to={"/login"}>Login</Link>
+              </li>
+            )}
           </ul>
         </div>
       </div>
