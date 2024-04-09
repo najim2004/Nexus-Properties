@@ -5,6 +5,7 @@ import {
   signOut,
   updateProfile,
 } from "firebase/auth";
+import PropTypes from "prop-types";
 import { createContext, useEffect, useState } from "react";
 import { auth } from "../Firebase/Firebase.config";
 import Swal from "sweetalert2";
@@ -14,11 +15,21 @@ export const AuthContext = createContext(null);
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
-
+  const [data, setData] = useState([]);
+  const [dataLoading, setDataLoading] = useState(true);
   const registerUser = (email, password) => {
     setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
+
+  useEffect(() => {
+    fetch("/Json/data.json")
+      .then((response) => response.json())
+      .then((data) => {
+        setData(data);
+        setDataLoading(false);
+      });
+  }, []);
 
   useEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
@@ -68,8 +79,10 @@ const AuthProvider = ({ children }) => {
   };
 
   const contextData = {
+    data,
     user,
     loading,
+    dataLoading,
     registerUser,
     loginUser,
     logOutUser,
@@ -80,6 +93,10 @@ const AuthProvider = ({ children }) => {
   return (
     <AuthContext.Provider value={contextData}>{children}</AuthContext.Provider>
   );
+};
+
+AuthProvider.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 export default AuthProvider;

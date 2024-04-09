@@ -26,7 +26,6 @@ const Login = () => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
 
@@ -35,7 +34,7 @@ const Login = () => {
     loginUser(Email, password)
       .then((currentUser) => {
         sweetLoginAlert(
-          `Welcome Back Dear "${currentUser?.user?.displayName.toUpperCase()}"`,
+          `Welcome Back "${currentUser?.user?.displayName.toUpperCase()}"`,
           emoji,
           1500
         );
@@ -87,7 +86,7 @@ const Login = () => {
                 })}
                 type="text"
                 placeholder="Email"
-                className="w-full px-4 py-3 rounded-md border-gray-300 border-[1px] dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
+                className="outline-none w-full px-4 py-3 rounded-md border-gray-300 border-[1px] dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
               />
               {errors?.Email?.type === "required" && (
                 <p className="text-red-500 dark:text-red-400">
@@ -112,7 +111,7 @@ const Login = () => {
                 type={pSH?"password":"text"}
                 name="password"
                 placeholder="Password"
-                className="w-full px-4 py-3 rounded-md border-gray-300 border-[1px] dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
+                className="outline-none w-full px-4 py-3 rounded-md border-gray-300 border-[1px] dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
               />
               <span
                 onClick={() => setPSH(!pSH)}

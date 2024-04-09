@@ -64,7 +64,7 @@ const UpdateProfile = () => {
                     })}
                     type="text"
                     placeholder="Full Name"
-                    className="w-full px-4 py-3 rounded-md border-gray-300 border-[1px] dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
+                    className="w-full px-4 py-3 outline-none rounded-md border-gray-300 border-[1px] dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
                   />
                   {errors?.Name?.type === "required" && (
                     <p className="text-red-500 dark:text-red-400">
@@ -81,7 +81,7 @@ const UpdateProfile = () => {
                     {...register("Photo")}
                     type="text"
                     placeholder="Photo"
-                    className="w-full px-4 py-3 rounded-md border-gray-300 border-[1px] dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
+                    className="w-full px-4 py-3 rounded-md border-gray-300 outline-none border-[1px] dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
                   />
                 </div>
                 <div className="space-y-1 text-sm">
@@ -91,7 +91,7 @@ const UpdateProfile = () => {
                     readOnly
                     value={user?.email}
                     type="text"
-                    className="w-full px-4 py-3 rounded-md border-gray-300 border-[1px] dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
+                    className="w-full px-4 py-3 rounded-md border-gray-300 outline-none border-[1px] dark:bg-gray-50 dark:text-gray-800 "
                   />
                 </div>
                 <input

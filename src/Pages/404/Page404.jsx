@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import img404 from "../../assets/404.gif";
 const Page404 = () => {
   return (
@@ -7,6 +8,7 @@ const Page404 = () => {
       <div className="max-w-[500px]">
       <img className="w-full h-full" src={img404} alt="" />
       </div>
+      <Link to={-1} className="btn bg-gray-300 hover:!bg-[#EFBC9B] text-medium !border-none">Go Back</Link>
     </div>
   );
 };
