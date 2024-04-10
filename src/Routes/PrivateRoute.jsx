@@ -9,7 +9,7 @@ const PrivateRoute = ({ children }) => {
   if (loading) {
     return (
       <div className=" h-screen grid place-items-center">
-        <span className="loading size-[80px] text-green-500 loading-infinity loading-lg"></span>
+        <span className="loading size-[80px] text-cmnBG loading-infinity loading-lg"></span>
       </div>
     );
   }

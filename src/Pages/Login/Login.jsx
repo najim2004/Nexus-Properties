@@ -138,7 +138,7 @@ const Login = () => {
             <input
               type="submit"
               value="Login"
-              className="w-full btn p-3 text-center rounded-sm dark:text-gray-50 dark:bg-violet-600"
+              className="w-full btn p-3 text-center rounded-sm dark:text-gray-50 bg-cmnBG"
             />
           </form>
           {/* ................. from end here .................. */}

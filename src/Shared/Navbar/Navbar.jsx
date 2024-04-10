@@ -31,10 +31,7 @@ const Navbar = () => {
     <div className="max-w-[1300px] mx-auto pt-3 md:pt-5 lg:pt-10">
       <div className="navbar ">
         <div className="navbar-start">
-          <Link
-            to={"/"}
-            className="btn btn-ghost text-xl md:text-2xl lg:text-3xl"
-          >
+          <Link to={"/"} className="text-xl font-bold md:text-2xl lg:text-3xl">
             Nexus Properties
           </Link>
         </div>
@@ -74,11 +71,18 @@ const Navbar = () => {
                   )}
                 </ul>
               </div>
-              <button onClick={handleLogOut} className="hidden lg:flex text-sm font-semibold btn-sm btn">Logout</button>
+              <button
+                onClick={handleLogOut}
+                className="hidden lg:flex text-sm font-semibold btn-sm btn text-cmnBG bg-transparent border-[2px] border-cmnBG rounded-[5px]"
+              >
+                Logout
+              </button>
             </div>
           ) : (
             <Link to={"/login"}>
-              <button className="btn">Login</button>
+              <button className="btn text-cmnBG bg-transparent border-[2px] border-cmnBG rounded-[5px]">
+                Login
+              </button>
             </Link>
           )}
         </div>

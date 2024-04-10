@@ -5,7 +5,6 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { useForm } from "react-hook-form";
 const UpdateProfile = () => {
   const { user, updateUserProfile, sweetAlert } = useContext(AuthContext);
-
   const {
     register,
     handleSubmit,
@@ -28,13 +27,13 @@ const UpdateProfile = () => {
           console.log(errors);
         });
     } else {
-      sweetAlert("No Changes", "warning", false, true, false);
+      sweetAlert("No Changes detect!", "warning", false, true, false);
     }
   };
   return (
     <div className="bg-[white]">
       <Navbar></Navbar>
-      <div className="max-w-[1300px] h-[calc(100vh-78px)] lg:h-[calc(100vh-108px)] flex items-center mx-auto">
+      <div className="max-w-[1300px] p-3 h-[calc(100vh-78px)] lg:h-[calc(100vh-108px)] flex items-center mx-auto">
         <div className="bg-[#1e1e1e0b] mx-2 lg:p-12 p-6 md:p-8 w-[900px] md:mx-auto Lg:mx-auto min-h-[550px] rounded-2xl">
           <div className="mb-10">
             <h3 className=" font-semibold">Update Your Profile</h3>
@@ -97,7 +96,7 @@ const UpdateProfile = () => {
                 <input
                   type="submit"
                   value="Save"
-                  className="w-full rounded-lg btn p-3 text-center dark:text-gray-50 dark:bg-violet-600"
+                  className="w-full !rounded-sm btn p-3 text-center dark:text-gray-50 bg-cmnBG"
                 />
               </form>
             </div>

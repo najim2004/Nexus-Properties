@@ -6,6 +6,7 @@ import Register from "../Pages/Register/Register";
 import PrivateRoute from "./PrivateRoute";
 import UpdateProfile from "../Pages/UpdateProfile/UpdateProfile";
 import Page404 from "../Pages/404/Page404";
+import DetailsPage from "../Pages/DetailsPage/DetailsPage";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,14 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <UpdateProfile></UpdateProfile>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/details/:id",
+        element: (
+          <PrivateRoute>
+            <DetailsPage></DetailsPage>
           </PrivateRoute>
         ),
       },
