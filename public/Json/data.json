@@ -7,9 +7,10 @@
     "description": "This cozy single-family home is perfect for families looking for a peaceful retreat. With three spacious bedrooms, a welcoming living room, and a fully equipped kitchen, it offers comfort and convenience. The backyard oasis features a swimming pool and a patio, ideal for outdoor gatherings and relaxation. Located in a friendly neighborhood close to schools and parks, this home provides the ideal setting for creating lasting memories with loved ones.",
     "price": "$400,000",
     "status": "sale",
-    "area": "2,200 sq ft",
+    "area": "2,200 sqft",
     "location": "123 Oak Street, Suburbia, USA",
-    "facilities": ["Living Room", "Kitchen", "Swimming Pool", "Backyard"]
+    "facilities": ["Living Room", "Kitchen", "Swimming Pool", "Backyard"],
+    "bg_color": "#F4F4F4"
   },
   {
     "image": "https://i.ibb.co/jzdrPnN/nexus-properties-2.jpg",
@@ -19,14 +20,15 @@
     "description": "Experience urban living at its finest in this modern city apartment. Situated in a sleek high-rise building, it offers breathtaking views of the skyline. The spacious interior features an open-plan layout with stylish finishes and high-end appliances in the kitchen. Residents enjoy access to exclusive amenities including a fitness center, rooftop terrace, and concierge service. With its prime location in the heart of the city, this apartment offers convenience and luxury lifestyle.",
     "price": "$2,500/month",
     "status": "rent",
-    "area": "1,000 sq ft",
+    "area": "1,000 sqft",
     "location": "456 Main Street, Downtown, USA",
     "facilities": [
       "Living Room",
       "Kitchen",
       "Fitness Center",
       "Rooftop Terrace"
-    ]
+    ],
+    "bg_color": "#FFFFFF"
   },
   {
     "image": "https://i.ibb.co/BcGXRTY/nexus-properties-3.jpg",
@@ -36,9 +38,10 @@
     "description": "This charming townhouse offers a perfect blend of comfort and style. Featuring two bedrooms, an elegant living room, and a cozy kitchen, it exudes warmth and character. The private patio is ideal for outdoor dining and relaxation. Situated in a picturesque neighborhood close to shops and restaurants, this townhouse provides a serene living environment with all the conveniences of city life.",
     "price": "$350,000",
     "status": "sale",
-    "area": "1,500 sq ft",
+    "area": "1,500 sqft",
     "location": "789 Maple Avenue, Town Center, USA",
-    "facilities": ["Living Room", "Kitchen", "Patio"]
+    "facilities": ["Living Room", "Kitchen", "Patio"],
+    "bg_color": "#F4F4F4"
   },
   {
     "image": "https://i.ibb.co/5hsHv4z/nexus-properties-4.jpg",
@@ -48,9 +51,10 @@
     "description": "Designed for student living, this housing complex offers comfortable and convenient accommodations. The furnished units feature modern amenities and a study-friendly environment. Residents have access to communal spaces including a study lounge, fitness center, and outdoor recreation area. Located near campus, it provides easy access to classes and campus facilities.",
     "price": "$900/month",
     "status": "rent",
-    "area": "700 sq ft",
+    "area": "700 sqft",
     "location": "101 University Avenue, College Town, USA",
-    "facilities": ["Bedroom", "Bathroom", "Study Lounge", "Fitness Center"]
+    "facilities": ["Bedroom", "Bathroom", "Study Lounge", "Fitness Center"],
+    "bg_color": "#FFFFFF"
   },
   {
     "image": "https://i.ibb.co/TwgPxbn/nexus-properties-5.jpg",
@@ -60,9 +64,10 @@
     "description": "This senior living community offers a vibrant and supportive environment for older adults. The comfortable apartments feature modern amenities and accessibility features. Residents enjoy a variety of activities and social events, along with on-site health and wellness services. Located in a peaceful neighborhood, it provides a safe and welcoming home for seniors.",
     "price": "$300,000",
     "status": "sale",
-    "area": "900 sq ft",
+    "area": "900 sqft",
     "location": "111 Pine Street, Senior Village, USA",
-    "facilities": ["Living Room", "Kitchen", "Community Center", "Garden"]
+    "facilities": ["Living Room", "Kitchen", "Community Center", "Garden"],
+    "bg_color": "#FFFFFF"
   },
   {
     "image": "https://i.ibb.co/1XvCJSB/nexus-properties-6.jpg",
@@ -72,9 +77,10 @@
     "description": "Escape to paradise in this stunning beachfront vacation rental. With breathtaking ocean views and direct access to the beach, it offers the ultimate relaxation getaway. The spacious interior features luxurious furnishings and modern amenities. Enjoy outdoor dining on the private terrace or relax in the beachside cabana. Located in a sought-after destination, it's the perfect spot for your next vacation.",
     "price": "$500/night",
     "status": "rent",
-    "area": "1,800 sq ft",
+    "area": "1,800 sqft",
     "location": "123 Beach Road, Coastal Paradise, USA",
-    "facilities": ["Living Room", "Kitchen", "Terrace", "Beach Access"]
+    "facilities": ["Living Room", "Kitchen", "Terrace", "Beach Access"],
+    "bg_color": "#FFFFFF"
   },
   {
     "image": "https://i.ibb.co/fC73fy9/nexus-properties-7.jpg",
@@ -84,9 +90,10 @@
     "description": "Ideal for families, this suburban home offers plenty of space and comfort. With four bedrooms, a large backyard, and a bonus room, it provides room for everyone to spread out. The open-concept kitchen and living area is perfect for entertaining, while the backyard oasis features a pool and patio for outdoor fun. Located in a family-friendly neighborhood with top-rated schools and parks nearby, it's the perfect place to call home.",
     "price": "$450,000",
     "status": "sale",
-    "area": "2,500 sq ft",
+    "area": "2,500 sqft",
     "location": "234 Elm Street, Suburbia, USA",
-    "facilities": ["Living Room", "Kitchen", "Backyard", "Swimming Pool"]
+    "facilities": ["Living Room", "Kitchen", "Backyard", "Swimming Pool"],
+    "bg_color": "#F4F4F4"
   },
   {
     "image": "https://i.ibb.co/PNkbbwr/nexus-properties-8.jpg",
@@ -96,9 +103,10 @@
     "description": "Experience urban living in style in this downtown loft apartment. Located in a historic building, it boasts soaring ceilings, exposed brick walls, and industrial-chic decor. The open floor plan features a gourmet kitchen, spacious living area, and flexible loft space. Residents enjoy access to a rooftop terrace with panoramic city views. With its prime location near restaurants, shops, and entertainment venues, it offers the ultimate urban lifestyle.",
     "price": "$3,000/month",
     "status": "rent",
-    "area": "1,400 sq ft",
+    "area": "1,400 sqft",
     "location": "345 Market Street, City Center, USA",
-    "facilities": ["Living Room", "Kitchen", "Loft Space", "Rooftop Terrace"]
+    "facilities": ["Living Room", "Kitchen", "Loft Space", "Rooftop Terrace"],
+    "bg_color": "#FFFFFF"
   },
   {
     "image": "https://i.ibb.co/mGNWG1q/nexus-properties-9.jpg",
@@ -108,13 +116,14 @@
     "description": "Experience luxury senior living in this upscale apartment community. Designed for comfort and convenience, it offers spacious floor plans and modern amenities. Residents enjoy access to a range of services and activities, including chef-prepared meals, fitness classes, and social events. With its prime location and resort-style amenities, it's the perfect place to enjoy retirement in style.",
     "price": "$400,000",
     "status": "sale",
-    "area": "1,200 sq ft",
+    "area": "1,200 sqft",
     "location": "456 Oak Lane, Senior Haven, USA",
     "facilities": [
       "Living Room",
       "Kitchen",
       "Community Dining",
       "Fitness Center"
-    ]
+    ],
+    "bg_color": "#F4F4F4"
   }
 ]

@@ -43,7 +43,7 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
           {user ? (
-            <div className="flex gap-3 items-center">
+            <div className="flex z-20 gap-3 items-center">
               <div
                 data-tip={user?.displayName.toUpperCase()}
                 className="tooltip tooltip-left dropdown dropdown-end"
@@ -82,7 +82,7 @@ const Navbar = () => {
             </Link>
           )}
         </div>
-        <div className="dropdown">
+        <div className="dropdown !z-20">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"

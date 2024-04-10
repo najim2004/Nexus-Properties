@@ -42,21 +42,21 @@ const UpdateProfile = () => {
           </div>
 
           <div className="flex flex-col lg:flex-row gap-10">
-            <img
-              className="size-[150px] mx-auto md:mx-0 lg:mx-0 rounded-[50%]"
-              src={user?.photoURL ? user?.photoURL : userImg}
-              alt=""
-            />
+            <div className="h-[150px] w-[150px] mx-auto md:mx-0 lg:mx-0 rounded-[50%]">
+              <img
+                className="h-[150px] w-[150px] mx-auto md:mx-0 lg:mx-0 rounded-[50%]"
+                src={user?.photoURL ? user?.photoURL : userImg}
+                alt=""
+              />
+            </div>
 
-            <div className="w-full">
+            <div className="w-full flex-1">
               <form
                 onSubmit={handleSubmit(handleUpdateProfile)}
                 className="space-y-3"
               >
                 <div className="space-y-1 text-sm">
-                  <label className="block dark:text-gray-600">
-                    Your Name
-                  </label>
+                  <label className="block dark:text-gray-600">Your Name</label>
                   <input
                     name="Name"
                     {...register("Name", {
