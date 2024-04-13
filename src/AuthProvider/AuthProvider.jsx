@@ -2,6 +2,7 @@ import {
   createUserWithEmailAndPassword,
   onAuthStateChanged,
   signInWithEmailAndPassword,
+  signInWithPopup,
   signOut,
   updateProfile,
 } from "firebase/auth";
@@ -9,6 +10,7 @@ import PropTypes from "prop-types";
 import { createContext, useEffect, useState } from "react";
 import { auth } from "../Firebase/Firebase.config";
 import Swal from "sweetalert2";
+import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
 
 export const AuthContext = createContext(null);
 
@@ -17,6 +19,7 @@ const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState([]);
   const [dataLoading, setDataLoading] = useState(true);
+
   const registerUser = (email, password) => {
     setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
@@ -30,6 +33,15 @@ const AuthProvider = ({ children }) => {
         setDataLoading(false);
       });
   }, []);
+
+  const googleProvider = new GoogleAuthProvider();
+  const githubProvider = new GithubAuthProvider();
+  const LoginByGoogle = () => {
+    return signInWithPopup(auth, googleProvider);
+  };
+  const LoginByGitHub = () => {
+    return signInWithPopup(auth, githubProvider);
+  };
 
   useEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
@@ -83,6 +95,8 @@ const AuthProvider = ({ children }) => {
     user,
     loading,
     dataLoading,
+    LoginByGoogle,
+    LoginByGitHub,
     registerUser,
     loginUser,
     logOutUser,

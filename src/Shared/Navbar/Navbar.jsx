@@ -12,13 +12,13 @@ const Navbar = () => {
         <NavLink to={"/"}>Home</NavLink>
       </li>
       <li>
-        <NavLink to={"/update-profile"}>Update Profile</NavLink>
-      </li>
-      <li>
         <NavLink to={"/bookmark"}>Bookmark</NavLink>
       </li>
       <li>
         <NavLink to={"/contact-us"}>Contact us</NavLink>
+      </li>
+      <li>
+        <NavLink to={"/update-profile"}>Update Profile</NavLink>
       </li>
     </>
   );
