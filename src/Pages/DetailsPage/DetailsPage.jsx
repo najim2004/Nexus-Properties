@@ -1,11 +1,13 @@
 import { Link, useParams } from "react-router-dom";
-import Navbar from "../../Shared/Navbar/Navbar";
 import { useContext, useEffect, useState } from "react";
 import { IoLocationOutline } from "react-icons/io5";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { IoArrowBack } from "react-icons/io5";
+import { BsBookmarks } from "react-icons/bs";
+import { getStoredData, saveBookmarked } from "../../Utilities/LocalStorage";
 const DetailsPage = () => {
   const { id } = useParams();
-  const { data } = useContext(AuthContext);
+  const { data, sweetAlert } = useContext(AuthContext);
   const [findData, setFindData] = useState([]);
   const [filterData, setFilterData] = useState([]);
 
@@ -14,9 +16,16 @@ const DetailsPage = () => {
     setFilterData(data?.filter((item) => item.id != id));
   }, [data, id]);
 
+  const handleBookmark = () => {
+    if (!getStoredData().includes(parseInt(findData?.id))) {
+      saveBookmarked(parseInt(findData?.id));
+      sweetAlert("Successfully Bookmarked!", "success", false, false, 1500);
+    } else {
+      sweetAlert("Already Bookmarked!", "warning", false, true, false);
+    }
+  };
   return (
     <div>
-      <Navbar></Navbar>
       <div className="max-w-[1300px] grid grid-cols-1 gap-6 lg:grid-cols-6 mx-auto">
         <div className="lg:col-span-4 p-5 h-fit border-[1px] border-gray-300 rounded-xl">
           <div className="h-[200px] md:h-[300px] lg:h-[400px] w-full rounded-lg bg-gray-200">
@@ -61,6 +70,22 @@ const DetailsPage = () => {
           <div className="mt-6 text-justify">
             <span className="font-bold">Description : </span>
             {findData?.description}
+          </div>
+          <div className="flex  mt-10 justify-between items-center">
+            <Link to={-1}>
+              <button className="btn bg-cmnBG  flex items-center text-white">
+                <IoArrowBack className="font-bold text-xl" /> Previous page
+              </button>
+            </Link>
+            <p className="flex gap-5 items-center">
+              <span className="font-semibold">Bookmark This Property</span>
+              <button
+                onClick={handleBookmark}
+                className="btn bg-transparent border-none hover:bg-transparent !shadow-none !p-0"
+              >
+                <BsBookmarks className="text-3xl" />
+              </button>
+            </p>
           </div>
         </div>
         <div className="lg:col-span-2 p-8 grid grid-cols-1 gap-5 border-[1px] border-gray-300 rounded-xl">

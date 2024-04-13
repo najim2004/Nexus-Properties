@@ -7,3 +7,10 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+
+.n-menu a.active {
+  background-color: transparent !important;
+  color: #b08968 !important;
+  border: 2px solid #b08968 !important;
+  font-weight: 600;
+}

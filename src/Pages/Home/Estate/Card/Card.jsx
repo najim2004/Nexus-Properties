@@ -16,11 +16,11 @@ const Card = ({ item }) => {
   } = item;
   return (
     <div>
-      <div className="p-2 border-[1px] h-full flex flex-col border-gray-200 bg-[#f4e1d22d] rounded-xl">
+      <div className="p-2 border-[1px] h-full flex flex-col border-gray-200 bg-[#f4e1d22d] rounded-lg">
         <div className="flex-grow h-full">
           <div className="w-full h-[250px] rounded-xl bg-gray-300 mb-4">
             <img
-              className="w-full h-full rounded-xl"
+              className="w-full h-full rounded-lg"
               src={image}
               alt="loading"
             />
@@ -30,15 +30,17 @@ const Card = ({ item }) => {
             <span className="font-bold">Segment Name : </span>
             {segment_name}
           </h3>
-          <div className="mt-3">
+          <div className="mt-3 mb-3">
             <h3 className="font-bold">Facilities :</h3>
-            <div className="flex font-medium text-[#565656] *:mr-3 flex-wrap">
-              {facilities.map((item, index) => (
-                <p key={index}>{item},</p>
-              ))}
+            <div className="font-medium text-[#565656]">
+              <ol className="list-decimal ml-5">
+                {facilities.map((item, index) => (
+                  <li key={index}>{item},</li>
+                ))}
+              </ol>
             </div>
           </div>
-          <div className="flex mt-4 gap-2 items-center">
+          <div className="space-y-3 items-center">
             <h3>
               <span className="font-bold">Status: </span>
               {status}

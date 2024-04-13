@@ -70,7 +70,6 @@ const Login = () => {
   };
   return (
     <div className="">
-      <Navbar></Navbar>
       <div className="h-[calc(100vh-108px)] p-3 w-screen flex justify-center items-center">
         <div className="w-full  max-w-md p-8 space-y-3 shadow-2xl border-[1px] border-purple-200 rounded-xl dark:bg-gray-50 dark:text-gray-800">
           <h1 className="text-2xl font-bold text-center">Login</h1>

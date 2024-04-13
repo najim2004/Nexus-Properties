@@ -32,7 +32,6 @@ const UpdateProfile = () => {
   };
   return (
     <div className="bg-[white]">
-      <Navbar></Navbar>
       <div className="max-w-[1300px] p-3 h-[calc(100vh-78px)] lg:h-[calc(100vh-108px)] flex items-center mx-auto">
         <div className="bg-[#1e1e1e0b] mx-2 lg:p-12 p-6 md:p-8 w-[900px] md:mx-auto Lg:mx-auto min-h-[550px] rounded-2xl">
           <div className="mb-10">

@@ -7,6 +7,8 @@ import PrivateRoute from "./PrivateRoute";
 import UpdateProfile from "../Pages/UpdateProfile/UpdateProfile";
 import Page404 from "../Pages/404/Page404";
 import DetailsPage from "../Pages/DetailsPage/DetailsPage";
+import Bookmark from "../Pages/Bookmark/Bookmark";
+import ContactUs from "../Pages/ContactUs/ContactUs";
 
 const router = createBrowserRouter([
   {
@@ -27,10 +29,22 @@ const router = createBrowserRouter([
         element: <Register></Register>,
       },
       {
+        path: "/contact-us",
+        element: <ContactUs></ContactUs>,
+      },
+      {
         path: "/update-profile",
         element: (
           <PrivateRoute>
             <UpdateProfile></UpdateProfile>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/bookmark",
+        element: (
+          <PrivateRoute>
+            <Bookmark></Bookmark>
           </PrivateRoute>
         ),
       },

@@ -15,7 +15,10 @@ const Navbar = () => {
         <NavLink to={"/update-profile"}>Update Profile</NavLink>
       </li>
       <li>
-        <NavLink to={"/Contact-us"}>Contact us</NavLink>
+        <NavLink to={"/bookmark"}>Bookmark</NavLink>
+      </li>
+      <li>
+        <NavLink to={"/contact-us"}>Contact us</NavLink>
       </li>
     </>
   );
@@ -36,7 +39,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{menu}</ul>
+          <ul className="menu gap-10 n-menu menu-horizontal px-1">{menu}</ul>
         </div>
         <div className="navbar-end">
           {user ? (
@@ -86,7 +89,7 @@ const Navbar = () => {
             </Link>
           )}
         </div>
-        <div className="dropdown !z-20">
+        <div className="dropdown  !z-20">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"

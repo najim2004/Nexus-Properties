@@ -13,7 +13,6 @@ const Home = () => {
   };
   return (
     <div className="">
-      <Navbar></Navbar>
       <Slider scrollHandler={scrollHandler} estateRef={estateRef}></Slider>
       <Estate estateRef={estateRef}></Estate>
     </div>
