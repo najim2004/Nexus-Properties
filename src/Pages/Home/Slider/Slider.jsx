@@ -17,7 +17,7 @@ const Slider = ({ scrollHandler, estateRef }) => {
           className="rounded-2xl z-0"
           loop={true}
           autoplay={{
-            delay: 2500,
+            delay: 3000,
           }}
           pagination={{
             clickable: true,
@@ -38,7 +38,7 @@ const Slider = ({ scrollHandler, estateRef }) => {
                   className="absolute flex flex-col items-center justify-center inset-0 rounded-2xl"
                   style={{
                     background:
-                      "linear-gradient(0deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.30) 100%)",
+                      "linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.10) 100%)",
                   }}
                 ></div>
               </div>
@@ -56,7 +56,7 @@ const Slider = ({ scrollHandler, estateRef }) => {
             </p>
             <button
               onClick={() => scrollHandler(estateRef)}
-              className="btn bg-[#b08968] text-lg border-none h-14 mt-2 lg:mt-4 !rounded-[5px] hover: text-gray-700 !font-bold"
+              className="btn bg-[#b08968]  text-lg border-none h-14 mt-2 lg:mt-4 !rounded-[5px] hover: text-[#ffffffad] !font-bold"
             >
               Explore Now
             </button>

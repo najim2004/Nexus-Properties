@@ -18,6 +18,7 @@ const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState([]);
+  const [reviewData, setReviewData] = useState([]);
   const [dataLoading, setDataLoading] = useState(true);
 
   const registerUser = (email, password) => {
@@ -31,6 +32,14 @@ const AuthProvider = ({ children }) => {
       .then((data) => {
         setData(data);
         setDataLoading(false);
+      });
+  }, []);
+
+  useEffect(() => {
+    fetch("/Json/review.json")
+      .then((response) => response.json())
+      .then((data) => {
+        setReviewData(data);
       });
   }, []);
 
@@ -92,6 +101,7 @@ const AuthProvider = ({ children }) => {
 
   const contextData = {
     data,
+    reviewData,
     user,
     loading,
     dataLoading,

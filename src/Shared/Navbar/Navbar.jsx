@@ -35,7 +35,7 @@ const Navbar = () => {
       <div className="navbar ">
         <div className="navbar-start">
           <Link to={"/"} className="text-xl font-bold md:text-2xl lg:text-3xl">
-            Nexus Properties
+            Nexus <span className="text-cmnBG">Properties</span>
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">

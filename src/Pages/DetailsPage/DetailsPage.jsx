@@ -27,7 +27,7 @@ const DetailsPage = () => {
   return (
     <div>
       <div className="max-w-[1300px] grid grid-cols-1 gap-6 lg:grid-cols-6 mx-auto">
-        <div className="lg:col-span-4 p-5 h-fit border-[1px] border-gray-300 rounded-xl">
+        <div className="lg:col-span-4 p-5 h-fit border-[1px] m-3 border-gray-300 rounded-xl">
           <div className="h-[200px] md:h-[300px] lg:h-[400px] w-full rounded-lg bg-gray-200">
             <img
               className="w-full h-full rounded-lg"
@@ -71,8 +71,8 @@ const DetailsPage = () => {
             <span className="font-bold">Description : </span>
             {findData?.description}
           </div>
-          <div className="flex  mt-10 justify-between items-center">
-            <Link to={-1}>
+          <div className="flex flex-wrap  justify-center md:justify-between  mt-10 lg:justify-between items-center">
+            <Link  to={-1}>
               <button className="btn bg-cmnBG  flex items-center text-white">
                 <IoArrowBack className="font-bold text-xl" /> Previous page
               </button>
