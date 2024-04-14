@@ -15,7 +15,11 @@ const Card = ({ item }) => {
     facilities,
   } = item;
   return (
-    <div>
+    <div
+      data-aos="fade-up"
+      data-aos-duration="600"
+      data-aos-delay={id != 0 ? 100 * id : 0}
+    >
       <div className="p-2 border-[1px] h-full flex flex-col border-gray-200 bg-[#f4e1d22d] rounded-lg">
         <div className="flex-grow h-full">
           <div className="w-full h-[250px] rounded-xl bg-gray-300 mb-4">

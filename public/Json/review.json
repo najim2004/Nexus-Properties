@@ -1,39 +1,44 @@
 [
-    {
-      "name": "Emily Johnson",
-      "from": "New York City, NY",
-      "review_description": "Absolutely loved my experience here! The food was delicious, the staff was friendly, and the ambiance was perfect for a cozy dinner. Highly recommend the pasta dish!",
-      "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D"
-    },
-    {
-      "name": "Mark Thompson",
-      "from": "Los Angeles, CA",
-      "review_description": "Had a fantastic time at this restaurant! The cocktails were creative and tasty, and the rooftop view was breathtaking. Can't wait to visit again!",
-      "image": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D"
-    },
-    {
-      "name": "Sarah Patel",
-      "from": "Chicago, IL",
-      "review_description": "The service here was impeccable. The staff was attentive and made sure we had everything we needed throughout our meal. The steak was cooked to perfection!",
-      "image": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dXNlcnxlbnwwfHwwfHx8MA%3D%3D"
-    },
-    {
-      "name": "David Lee",
-      "from": "Houston, TX",
-      "review_description": "Visited this place with friends and we had a blast! The live music was great, and the beer selection was impressive. Will definitely be back for another fun night out!",
-      "image": "https://images.unsplash.com/flagged/photo-1573740144655-bbb6e88fb18a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D"
-    },
-    {
-      "name": "Jennifer Smith",
-      "from": "Miami, FL",
-      "review_description": "I celebrated my birthday dinner here and it was wonderful! The staff went above and beyond to make it a special occasion, and the dessert was divine. Thank you for a memorable evening!",
-      "image": "https://images.unsplash.com/photo-1546961329-78bef0414d7c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHVzZXJ8ZW58MHx8MHx8fDA%3D"
-    },
-    {
-      "name": "Alex Rodriguez",
-      "from": "Seattle, WA",
-      "review_description": "Had an amazing brunch experience here! The eggs benedict were delicious, and the mimosa was perfectly mixed. The outdoor seating area was lovely too!",
-      "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D"
-    }
-  ]
-  
+  {
+    "name": "Emily Johnson",
+    "from": "New York City, NY",
+    "review_description": "Exceptional service for my home renovation. Highly recommend for quality and professionalism!",
+    "image": "https://media.istockphoto.com/id/1386479313/photo/happy-millennial-afro-american-business-woman-posing-isolated-on-white.jpg?s=612x612&w=0&k=20&c=8ssXDNTp1XAPan8Bg6mJRwG7EXHshFO5o0v9SIj96nY=",
+    "background_color": "#FFFACD"
+  },
+  {
+    "name": "Mark Thompson",
+    "from": "Los Angeles, CA",
+    "review_description": "Best home inspection service. Thorough and reliable. Highly recommend for all homeowners!",
+    "image": "https://img.freepik.com/free-photo/portrait-man-laughing_23-2148859448.jpg?size=338&ext=jpg&ga=GA1.1.87170709.1707264000&semt=ais",
+    "background_color": "#E0FFFF"
+  },
+  {
+    "name": "Sarah Patel",
+    "from": "Chicago, IL",
+    "review_description": "Outstanding landscaping job. Transformed my backyard. Highly recommend for residential projects!",
+    "image": "https://t3.ftcdn.net/jpg/05/52/15/68/360_F_552156839_hQTIBjd35zljkgSz65pDaUUSyKK53DtZ.jpg",
+    "background_color": "#F0FFF0"
+  },
+  {
+    "name": "David Lee",
+    "from": "Houston, TX",
+    "review_description": "Top-notch roofing service. Fixed leaks efficiently. Highly recommend for residential needs!",
+    "image": "https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg",
+    "background_color": "#FFE4E1"
+  },
+  {
+    "name": "Jennifer Smith",
+    "from": "Miami, FL",
+    "review_description": "Excellent home cleaning service. Thorough and efficient. Highly recommend for residential properties!",
+    "image": "https://media.istockphoto.com/id/1289220974/photo/joyful-natural-young-woman-smiling.jpg?s=612x612&w=0&k=20&c=y8HSzmDzDcSZd9MzZb9N7oPQaUxHaNUtAGBwRuE5wHY=",
+    "background_color": "#F5DEB3"
+  },
+  {
+    "name": "Alex Rodriguez",
+    "from": "Seattle, WA",
+    "review_description": "Exceptional HVAC repair. Fixed quickly. Highly recommend for residential heating and cooling!",
+    "image": "https://i.pinimg.com/736x/f8/66/8e/f8668e5328cfb4938903406948383cf6.jpg",
+    "background_color": "#FFDAB9"
+  }
+]

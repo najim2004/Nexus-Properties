@@ -7,9 +7,18 @@ const ReviewSection = () => {
   const { reviewData } = useContext(AuthContext);
   return (
     <div className="max-w-[1300px] mx-auto mt-10 overflow-hidden">
+      <h3
+        data-aos="fade-up"
+        data-aos-duration="600"
+        className="text-4xl text-center mb-10 mt-10 font-semibold"
+      >
+        Our customers review
+      </h3>
       <Swiper
+        data-aos="flip-right"
+        data-aos-duration="2000"
         slidesPerView={3}
-        spaceBetween={10}
+        spaceBetween={0}
         loop={true}
         autoplay={{
           delay: 3000,
@@ -18,12 +27,18 @@ const ReviewSection = () => {
           clickable: true,
         }}
         modules={[Autoplay]}
-        className="mySwiper"
       >
         {reviewData.map((review, index) => (
           <SwiperSlide key={index}>
-            <div className="w-[250px] mx-auto py-3 px-6 overflow-hidden relative min-h-[300px] bg-[#fff5d7] rounded-md">
-              <img className={`${review.image}`} alt="" />
+            <div
+              className="w-[300px] mx-auto py-3 px-3 overflow-hidden relative min-h-[200px] rounded-md"
+              style={{ backgroundColor: `${review.background_color}` }}
+            >
+              <img
+                className="size-[90px] object-cover absolute -left-3 top-0 rounded-br-[50%]"
+                src={review.image}
+                alt=""
+              />
 
               <div className="ml-[70px]">
                 <h3>
@@ -33,8 +48,8 @@ const ReviewSection = () => {
                   <span className="font-medium">From : </span> {review.from}
                 </p>
               </div>
-              <div className="flex items-center h-full">
-                <p className="text-justify">{review.review_description}</p>
+              <div className="h-[200px] grid content-center justify-center">
+                <p>{review.review_description}</p>
               </div>
             </div>
           </SwiperSlide>

@@ -14,3 +14,8 @@ body {
   border: 2px solid #b08968 !important;
   font-weight: 600;
 }
+
+body[data-aos],
+[data-aos][data-aos][data-aos-duration="4000"] {
+  transition-duration: 4000ms;
+}

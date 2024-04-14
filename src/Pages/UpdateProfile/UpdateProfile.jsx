@@ -53,7 +53,7 @@ const UpdateProfile = () => {
                 onSubmit={handleSubmit(handleUpdateProfile)}
                 className="space-y-3"
               >
-                <div className="space-y-1 text-sm">
+                <div data-aos="fade-left" data-aos-duration="1000" className="space-y-1 text-sm">
                   <label className="block dark:text-gray-600">Your Name</label>
                   <input
                     name="Name"
@@ -70,7 +70,7 @@ const UpdateProfile = () => {
                     </p>
                   )}
                 </div>
-                <div className="space-y-1 text-sm">
+                <div data-aos="fade-right" data-aos-duration="1000" className="space-y-1 text-sm">
                   <label className="block dark:text-gray-600">
                     Your Photo Url
                   </label>
@@ -82,7 +82,7 @@ const UpdateProfile = () => {
                     className="w-full px-4 py-3 rounded-md border-gray-300 outline-none border-[1px] dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
                   />
                 </div>
-                <div className="space-y-1 text-sm">
+                <div data-aos="fade-left" data-aos-duration="1000" className="space-y-1 text-sm">
                   <label className="block dark:text-gray-600">Your Email</label>
                   <input
                     name="email"
@@ -92,11 +92,13 @@ const UpdateProfile = () => {
                     className="w-full px-4 py-3 rounded-md border-gray-300 outline-none border-[1px] dark:bg-gray-50 dark:text-gray-800 "
                   />
                 </div>
-                <input
-                  type="submit"
-                  value="Save"
-                  className="w-full !rounded-sm btn p-3 text-center dark:text-gray-50 bg-cmnBG"
-                />
+                <div data-aos="fade-right" data-aos-duration="1000" className="">
+                  <input
+                    type="submit"
+                    value="Save"
+                    className="w-full !rounded-sm btn p-3 text-center dark:text-gray-50 bg-cmnBG"
+                  />
+                </div>
               </form>
             </div>
           </div>

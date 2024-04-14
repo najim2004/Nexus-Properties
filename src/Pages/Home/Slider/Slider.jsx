@@ -11,7 +11,7 @@ import PropTypes from "prop-types";
 const Slider = ({ scrollHandler, estateRef }) => {
   const { data } = useContext(AuthContext);
   return (
-    <div className="max-w-[1300px] mx-auto mt-5 p-3  lg:p-0 rounded-2xl lg:mt-10 md:mt-8">
+    <div data-aos="zoom-in" className="max-w-[1300px] mx-auto mt-5 p-3  lg:p-0 rounded-2xl lg:mt-10 md:mt-8">
       <div className="relative md:h-[400px] h-[350px] rounded-2xl lg:h-[550px] bg-gray-400">
         <Swiper
           className="rounded-2xl z-0"

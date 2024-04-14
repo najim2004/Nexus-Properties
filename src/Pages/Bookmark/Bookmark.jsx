@@ -20,8 +20,11 @@ const Bookmark = () => {
     <div className="">
       <h3 className="text-3xl mt-10 text-center font-bold">Your Bookmarked</h3>
       <div className="max-w-[800px] grid grid-cols-1 gap-6 rounded-xl border-[1px] min-h-[140px] border-cmnBG p-5 mx-auto mt-5">
-        {bookmarks.map((bookmark) => (
+        {bookmarks.map((bookmark, idx) => (
           <div
+            data-aos="fade-up"
+            data-aos-duration="600"
+            data-aos-delay={idx != 0 ? 100 * idx : 0}
             key={bookmark?.id}
             className="bg-gray-100 relative flex justify-between items-center p-4 rounded-lg"
           >

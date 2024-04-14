@@ -31,7 +31,8 @@ const AuthProvider = ({ children }) => {
       .then((response) => response.json())
       .then((data) => {
         setData(data);
-        setDataLoading(false);
+
+        setTimeout(() => setDataLoading(false), 1500);
       });
   }, []);
 
