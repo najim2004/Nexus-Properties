@@ -18,11 +18,9 @@ const saveBookmarked = (id) => {
 
 const removeBookmarked = (id) => {
   const storedHome = getStoredData();
-  const existingBookmarked = storedHome.find((home) => home === id);
-  if (existingBookmarked) {
-    storedHome.splice(storedHome.indexOf(id), 1);
-    localStorage.setItem("bookmarked", JSON.stringify(storedHome));
-  }
+  const removeBookmarkedId = storedHome.filter((home) => home !== id);
+
+  localStorage.setItem("bookmarked", JSON.stringify(removeBookmarkedId));
 };
 
 export { getStoredData, saveBookmarked, removeBookmarked };

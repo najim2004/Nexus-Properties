@@ -17,9 +17,25 @@ const ReviewSection = () => {
       <Swiper
         data-aos="flip-right"
         data-aos-duration="2000"
-        slidesPerView={3}
-        spaceBetween={0}
+        slidesPerView={1}
+        spaceBetween={20}
         loop={true}
+        breakpoints={{
+          // when window width is smaller than sm breakpoint
+          
+          640: {
+            slidesPerView: 1,
+          },
+          // when window width is between sm and md breakpoint
+          768: {
+            slidesPerView: 2,
+          },
+          // when window width is between md and lg breakpoint
+          1024: {
+            slidesPerView: 3,
+          },
+          
+        }}
         autoplay={{
           delay: 3000,
         }}

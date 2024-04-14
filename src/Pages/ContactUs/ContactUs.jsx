@@ -14,7 +14,8 @@ const ContactUs = () => {
     nameRef.current.focus();
   };
   return (
-    <div className="flex flex-col max-w-[1300px] mx-auto mt-5 items-center mb-6 lg:mb-12">
+    <div className="max-w-[1300px] mx-auto ">
+      <div className="flex flex-col  lg:h-screen justify-center mt-5 items-center mb-6 lg:mb-12">
       <div data-aos="fade-up" className="w-full text-center">
         <h1 className="text-4xl font-semibold text-gray-700 mb-2">
           Contact Us
@@ -119,6 +120,7 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

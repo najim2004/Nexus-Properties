@@ -9,16 +9,19 @@ const Bookmark = () => {
   const localSData = getStoredData();
 
   useEffect(() => {
-    const localSData = getStoredData();
     setBookmarks(data.filter((item) => localSData.includes(item.id)));
-  }, [data, localSData]);
+  }, [data]);
 
   const handleRemove = (id) => {
+    setBookmarks(bookmarks.filter((item) => item.id != id));
+
     removeBookmarked(parseInt(id));
   };
   return (
     <div className="">
-      <h3 className="text-3xl mt-10 text-center font-bold">Your Bookmarked</h3>
+      <h3 className="text-3xl mt-10 text-center font-bold min-h-[calc(100vh-670px)]">
+        Your Bookmarked
+      </h3>
       <div className="max-w-[800px] grid grid-cols-1 gap-6 rounded-xl border-[1px] min-h-[140px] border-cmnBG p-5 mx-auto mt-5">
         {bookmarks.map((bookmark, idx) => (
           <div

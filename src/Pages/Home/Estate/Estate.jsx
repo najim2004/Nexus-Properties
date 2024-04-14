@@ -58,26 +58,5 @@ Estate.propTypes = {
   estateRef: PropTypes.object,
 };
 
-{
-  /* <div className="flex flex-col lg:flex-row gap-6">
-          <div className="h-[350px] w-[600px] bg-gray-200 rounded-lg">
-            <img
-              className="h-full w-full rounded-lg"
-              src="https://i.ibb.co/mGNWG1q/nexus-properties-9.jpg"
-              alt=""
-            />
-          </div>
-          <div className="">
-            <h3 className="text-2xl font-semibold">this is title</h3>
-            <p>
-              <p className="font-semibold">Segment name: </p>Senior living
-              communities
-            </p>
-            <p>
-              <p className="font-semibold">Status: </p>for sell
-            </p>
-            
-          </div>
-        </div> */
-}
+
 export default Estate;
