@@ -72,7 +72,7 @@ const DetailsPage = () => {
             {findData?.description}
           </div>
           <div className="flex flex-wrap  justify-center md:justify-between  mt-10 lg:justify-between items-center">
-            <Link  to={-1}>
+            <Link to={-1}>
               <button className="btn bg-cmnBG  flex items-center text-white">
                 <IoArrowBack className="font-bold text-xl" /> Previous page
               </button>
@@ -91,7 +91,11 @@ const DetailsPage = () => {
         <div className="lg:col-span-2 p-8 grid grid-cols-1 gap-5 border-[1px] border-gray-300 rounded-xl">
           <h3 className="text-center text-xl font-semibold">Choose Other</h3>
           {filterData?.slice(0, 4).map((item, index) => (
-            <Link key={index} to={`/details/${item?.id}`}>
+            <Link
+              key={index}
+              to={`../details/${item?.id}`}
+              state={item?.estate_title}
+            >
               <div className="">
                 <div
                   className="lg:w-full bg-gray-200 group relative bg-cover bg-center md:h-[300px] lg:h-[200px] min-h-[200px] rounded-lg"

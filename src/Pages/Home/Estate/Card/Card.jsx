@@ -63,7 +63,7 @@ const Card = ({ item }) => {
             <IoLocationOutline className="size-6" /> {location}
           </p>
         </div>
-        <Link to={`/details/${id}`}>
+        <Link to={`/details/${id}`} state={estate_title}>
           <button className="w-full btn btn-sm h-10 mt-4 border-[2px] border-cmnBG bg-transparent rounded-[5px] text-cmnBG">
             View Property
           </button>

@@ -38,6 +38,8 @@ const ReviewSection = () => {
           delay: 3000,
         }}
         allowTouchMove={false}
+
+        
         navigation={false}
         modules={[Autoplay]}
       >
