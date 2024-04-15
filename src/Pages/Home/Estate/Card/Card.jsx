@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { IoLocationOutline } from "react-icons/io5";
+import { BiArea } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 const Card = ({ item }) => {
@@ -23,7 +24,20 @@ const Card = ({ item }) => {
     >
       <div className="p-2 border-[1px] h-full flex flex-col border-gray-200 bg-[#f4e1d22d] rounded-lg">
         <div className="flex-grow h-full">
-          <div className="w-full h-[250px] rounded-xl bg-gray-300 mb-4">
+          <div className="w-full relative h-[250px] rounded-xl bg-gray-300 mb-4">
+            <div className="absolute inset-0">
+              <div className="inset-0 relative h-full flex items-end">
+                <h3 className="absolute right-2 top-2 bg-[#00000048] p-1 rounded-lg font-semibold text-white">
+                  {status}
+                </h3>
+                <div className="flex bg-[#00000060] justify-between w-full p-3 rounded-b-xl font-semibold text-white">
+                  <h3 className="">{price}</h3>
+                  <h3 className="flex gap-1 items-center">
+                    <BiArea /> {area}
+                  </h3>
+                </div>
+              </div>
+            </div>
             <img
               className="w-full h-full rounded-lg"
               src={image}
@@ -44,20 +58,6 @@ const Card = ({ item }) => {
                 ))}
               </ol>
             </div>
-          </div>
-          <div className="space-y-3 items-center">
-            <h3>
-              <span className="font-bold">Status: </span>
-              {status}
-            </h3>
-            <h3 className="">
-              <span className="font-bold">Price: </span>
-              {price}
-            </h3>
-            <h3>
-              <span className="font-bold">Area: </span>
-              {area}
-            </h3>
           </div>
           <p className="flex items-center font-medium mt-4 text-[#565656]">
             <IoLocationOutline className="size-6" /> {location}

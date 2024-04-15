@@ -6,7 +6,7 @@ import { Autoplay } from "swiper/modules";
 const ReviewSection = () => {
   const { reviewData } = useContext(AuthContext);
   return (
-    <div className="max-w-[1300px] mx-auto mt-10 overflow-hidden">
+    <div className="max-w-[1300px] mb-16 mx-auto mt-10 overflow-hidden">
       <h3
         data-aos="fade-up"
         data-aos-duration="600"
@@ -37,9 +37,8 @@ const ReviewSection = () => {
         autoplay={{
           delay: 3000,
         }}
-        pagination={{
-          clickable: true,
-        }}
+        allowTouchMove={false}
+        navigation={false}
         modules={[Autoplay]}
       >
         {reviewData.map((review, index) => (
