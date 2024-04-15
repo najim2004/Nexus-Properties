@@ -1,8 +1,9 @@
 import PropTypes from "prop-types";
 import { IoLocationOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
-
+import { useMediaQuery } from "react-responsive";
 const Card = ({ item }) => {
+  const isLargeScreen = useMediaQuery({ minWidth: 768 });
   const {
     image,
     id,
@@ -18,7 +19,7 @@ const Card = ({ item }) => {
     <div
       data-aos="fade-up"
       data-aos-duration="600"
-      data-aos-delay={id != 0 ? 100 * id : 0}
+      data-aos-delay={isLargeScreen != false ? 100 * id : 0}
     >
       <div className="p-2 border-[1px] h-full flex flex-col border-gray-200 bg-[#f4e1d22d] rounded-lg">
         <div className="flex-grow h-full">

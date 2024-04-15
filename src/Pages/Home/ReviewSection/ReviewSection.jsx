@@ -19,10 +19,9 @@ const ReviewSection = () => {
         data-aos-duration="2000"
         slidesPerView={1}
         spaceBetween={20}
-        loop={true}
         breakpoints={{
           // when window width is smaller than sm breakpoint
-          
+
           640: {
             slidesPerView: 1,
           },
@@ -34,7 +33,6 @@ const ReviewSection = () => {
           1024: {
             slidesPerView: 3,
           },
-          
         }}
         autoplay={{
           delay: 3000,

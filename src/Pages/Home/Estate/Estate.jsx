@@ -2,10 +2,13 @@ import PropTypes from "prop-types";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../../AuthProvider/AuthProvider";
 import Card from "./Card/Card";
+
 const Estate = ({ estateRef }) => {
   const { data, dataLoading } = useContext(AuthContext);
   const [cardData, setCardData] = useState([]);
   const [showAll, setShowAll] = useState(false);
+  
+
 
   useEffect(() => {
     if (showAll) {
@@ -57,6 +60,5 @@ const Estate = ({ estateRef }) => {
 Estate.propTypes = {
   estateRef: PropTypes.object,
 };
-
 
 export default Estate;
