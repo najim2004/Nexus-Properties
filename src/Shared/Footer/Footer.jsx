@@ -1,13 +1,18 @@
+import { Link, NavLink } from "react-router-dom";
+
 const Footer = () => {
   return (
     <div className="">
-      <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded">
-        <h3 className="text-2xl font-semibold">Nexus Properties</h3>
+      <footer className="footer footer-center p-10 bg-[#333] text-white">
+        <Link to={'/'} className="text-2xl font-semibold">Nexus Properties</Link>
         <nav className="grid grid-flow-col gap-4">
-          <a className="link link-hover">About us</a>
-          <a className="link link-hover">Contact</a>
-          <a className="link link-hover">Jobs</a>
-          <a className="link link-hover">Press kit</a>
+          <NavLink to={"/"}>Home</NavLink>
+
+          <NavLink to={"/bookmark"}>Bookmark</NavLink>
+
+          <NavLink to={"/contact-us"}>Contact us</NavLink>
+
+          <NavLink to={"/update-profile"}>Update Profile</NavLink>
         </nav>
         <nav>
           <div className="grid grid-flow-col gap-4">

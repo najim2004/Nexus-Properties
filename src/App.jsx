@@ -12,7 +12,6 @@ import "react-toastify/dist/ReactToastify.css";
 import { useEffect } from "react";
 function App() {
   const location = useLocation();
-  console.log(location);
   useEffect(() => {
     if (location.pathname == "/") {
       document.title = "Home";
