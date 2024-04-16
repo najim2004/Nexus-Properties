@@ -5,7 +5,7 @@ const Footer = () => {
     <div className="">
       <footer className="footer footer-center p-10 bg-[#333] text-white">
         <Link to={'/'} className="text-2xl font-semibold">Nexus Properties</Link>
-        <nav className="grid grid-flow-col gap-4">
+        <nav className="lg:grid flex flex-wrap justify-center grid-flow-col gap-4">
           <NavLink to={"/"}>Home</NavLink>
 
           <NavLink to={"/bookmark"}>Bookmark</NavLink>

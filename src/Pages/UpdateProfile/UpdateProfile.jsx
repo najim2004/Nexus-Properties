@@ -31,76 +31,86 @@ const UpdateProfile = () => {
     }
   };
   return (
-    <div className="bg-[white]">
-      <div className="max-w-[1300px] p-3 lg:h-[calc(100vh-108px)] flex items-center mx-auto">
-        <div className="bg-[#1e1e1e0b] mx-2 lg:p-12 p-6 md:p-8 w-[900px] md:mx-auto Lg:mx-auto min-h-[550px] rounded-2xl">
-          <div className="mb-10">
-            <h3 className=" font-semibold">Update Your Profile</h3>
-            <hr className="h-[1px] bg-gray-400 mt-5" />
+    <div className="w-full p-3 lg:h-[calc(100vh-108px)] h-full flex items-center mx-auto">
+      <div className="bg-[#1e1e1e0b] mx-2 lg:p-12 p-6 md:p-8 w-[900px] md:mx-auto Lg:mx-auto min-h-[550px] rounded-2xl">
+        <div className="mb-10">
+          <h3 className=" font-semibold">Update Your Profile</h3>
+          <hr className="h-[1px] bg-gray-400 mt-5" />
+        </div>
+
+        <div className="flex flex-col lg:flex-row gap-10">
+          <div className="h-[150px] w-[150px] mx-auto md:mx-0 lg:mx-0 rounded-[50%]">
+            <img
+              className="h-[150px] w-[150px] object-cover object-center mx-auto md:mx-0 lg:mx-0 rounded-[50%]"
+              src={user?.photoURL ? user?.photoURL : userImg}
+              alt=""
+            />
           </div>
 
-          <div className="flex flex-col lg:flex-row gap-10">
-            <div className="h-[150px] w-[150px] mx-auto md:mx-0 lg:mx-0 rounded-[50%]">
-              <img
-                className="h-[150px] w-[150px] mx-auto md:mx-0 lg:mx-0 rounded-[50%]"
-                src={user?.photoURL ? user?.photoURL : userImg}
-                alt=""
-              />
-            </div>
-
-            <div className="w-full flex-1">
-              <form
-                onSubmit={handleSubmit(handleUpdateProfile)}
-                className="space-y-3"
+          <div className="w-full flex-1">
+            <form
+              onSubmit={handleSubmit(handleUpdateProfile)}
+              className="space-y-3"
+            >
+              <div
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                className="space-y-1 text-sm"
               >
-                <div data-aos="fade-left" data-aos-duration="1000" className="space-y-1 text-sm">
-                  <label className="block dark:text-gray-600">Your Name</label>
-                  <input
-                    name="Name"
-                    {...register("Name", {
-                      required: true,
-                    })}
-                    type="text"
-                    placeholder="Full Name"
-                    className="w-full px-4 py-3 outline-none rounded-md border-gray-300 border-[1px] dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
-                  />
-                  {errors?.Name?.type === "required" && (
-                    <p className="text-red-500 dark:text-red-400">
-                      This filed is required!
-                    </p>
-                  )}
-                </div>
-                <div data-aos="fade-right" data-aos-duration="1000" className="space-y-1 text-sm">
-                  <label className="block dark:text-gray-600">
-                    Your Photo Url
-                  </label>
-                  <input
-                    name="photo"
-                    {...register("Photo")}
-                    type="text"
-                    placeholder="Photo"
-                    className="w-full px-4 py-3 rounded-md border-gray-300 outline-none border-[1px] dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
-                  />
-                </div>
-                <div data-aos="fade-left" data-aos-duration="1000" className="space-y-1 text-sm">
-                  <label className="block dark:text-gray-600">Your Email</label>
-                  <input
-                    name="email"
-                    readOnly
-                    value={user?.email}
-                    type="text"
-                    className="w-full px-4 py-3 rounded-md border-gray-300 outline-none border-[1px] dark:bg-gray-50 dark:text-gray-800 "
-                  />
-                </div>
-                <div data-aos="fade-right" data-aos-duration="1000" className="">
-                  <input
-                    type="submit"
-                    value="Save"
-                    className="w-full !rounded-sm btn p-3 text-center dark:text-gray-50 bg-cmnBG"
-                  />
-                </div>
-              </form>
-            </div>
+                <label className="block dark:text-gray-600">Your Name</label>
+                <input
+                  name="Name"
+                  {...register("Name", {
+                    required: true,
+                  })}
+                  type="text"
+                  placeholder="Full Name"
+                  className="w-full px-4 py-3 outline-none rounded-md border-gray-300 border-[1px] dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
+                />
+                {errors?.Name?.type === "required" && (
+                  <p className="text-red-500 dark:text-red-400">
+                    This filed is required!
+                  </p>
+                )}
+              </div>
+              <div
+                data-aos="fade-right"
+                data-aos-duration="1000"
+                className="space-y-1 text-sm"
+              >
+                <label className="block dark:text-gray-600">
+                  Your Photo Url
+                </label>
+                <input
+                  name="photo"
+                  {...register("Photo")}
+                  type="text"
+                  placeholder="Photo"
+                  className="w-full px-4 py-3 rounded-md border-gray-300 outline-none border-[1px] dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
+                />
+              </div>
+              <div
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                className="space-y-1 text-sm"
+              >
+                <label className="block dark:text-gray-600">Your Email</label>
+                <input
+                  name="email"
+                  readOnly
+                  value={user?.email}
+                  type="text"
+                  className="w-full px-4 py-3 rounded-md border-gray-300 outline-none border-[1px] dark:bg-gray-50 dark:text-gray-800 "
+                />
+              </div>
+              <div data-aos="fade-right" data-aos-duration="1000" className="">
+                <input
+                  type="submit"
+                  value="Save"
+                  className="w-full !rounded-sm btn p-3 text-center dark:text-gray-50 bg-cmnBG"
+                />
+              </div>
+            </form>
           </div>
         </div>
       </div>
