@@ -1,5 +1,4 @@
 import { useContext } from "react";
-import Navbar from "../../Shared/Navbar/Navbar";
 import userImg from "../../assets/user.png";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { useForm } from "react-hook-form";
@@ -31,7 +30,7 @@ const UpdateProfile = () => {
     }
   };
   return (
-    <div className="w-full p-3 lg:h-[calc(100vh-108px)] h-full flex items-center mx-auto">
+    <div className="w-full p-3 md:h-screen lg:h-[calc(100vh-108px)] h-full flex items-center mx-auto">
       <div className="bg-[#1e1e1e0b] mx-2 lg:p-12 p-6 md:p-8 w-[900px] md:mx-auto Lg:mx-auto min-h-[550px] rounded-2xl">
         <div className="mb-10">
           <h3 className=" font-semibold">Update Your Profile</h3>

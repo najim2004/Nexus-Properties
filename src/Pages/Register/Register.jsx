@@ -82,7 +82,7 @@ const Register = () => {
   };
   return (
     <div className="">
-      <div className="lg:h-[calc(100vh-108px)] h-full  p-3 w-screen flex items-center justify-center">
+      <div className="lg:h-[calc(100vh-108px)] md:h-[calc(100vh-100px)] h-full  p-3 w-screen flex items-center justify-center">
         <div className="w-full lg:shadow-2xl max-w-md p-8 space-y-3  border-[1px] border-purple-200 rounded-xl dark:bg-gray-50 dark:text-gray-800">
           <h1 className="text-2xl font-bold text-center">Register Now</h1>
 
