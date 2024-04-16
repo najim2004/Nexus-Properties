@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import userImg from "../../assets/user.png";
@@ -30,9 +30,29 @@ const Navbar = () => {
         sweetAlert("Oops!", "warning", "Something went wrong", true, false);
       });
   };
+  // scroll check
+  const [bgColor, setBgColor] = useState("#FFF");
+  const handleScroll = () => {
+    if (window.scrollY > 100) {
+      setBgColor("#eaeaeadc");
+    } else {
+      setBgColor("#FFF");
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <div className="max-w-[1300px] mx-auto pt-3 md:pt-5 lg:pt-10">
-      <div className="navbar ">
+    <div
+      className="sticky top-0 z-50"
+      style={{ backgroundColor: bgColor, backdropFilter: "blur(8px)" }}
+    >
+      <div className="max-w-[1300px] navbar mx-auto">
         <div className="navbar-start">
           <Link to={"/"} className="text-xl font-bold md:text-2xl lg:text-3xl">
             Nexus <span className="text-cmnBG">Properties</span>

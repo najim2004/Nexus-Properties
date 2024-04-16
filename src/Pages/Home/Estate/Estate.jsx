@@ -46,7 +46,7 @@ const Estate = ({ estateRef }) => {
           >
             <button
               onClick={() => setShowAll(!showAll)}
-              className="btn bg-transparent border-cmnBG border-[2px]  !rounded-[5px] text-cmnBG btn-sm h-10 font-semibold text-xl"
+              className="btn bg-transparent border-cmnBG border-[2px] px-8  !rounded-[15px] text-cmnBG btn-sm h-10 font-semibold text-xl"
             >
               {showAll ? "Hide Some" : "See All"}
             </button>

@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div className="">
       <footer className="footer footer-center p-10 bg-[#333] text-white">
-        <Link to={'/'} className="text-2xl font-semibold">Nexus Properties</Link>
+        <Link to={'/'} className="text-2xl font-semibold flex">Nexus <span className="text-cmnBG">Properties</span></Link>
         <nav className="lg:grid flex flex-wrap justify-center grid-flow-col gap-4">
           <NavLink to={"/"}>Home</NavLink>
 

@@ -20,6 +20,7 @@ const UpdateProfile = () => {
       updateUserProfile(Name, Photo)
         .then(() => {
           sweetAlert("Successfully Updated", "success", false, false, 2000);
+          setTimeout(() => window.location.reload(), 2000);
         })
         .catch((errors) => {
           sweetAlert("Oops!", "warning", "Something went wrong", true, false);
@@ -30,7 +31,7 @@ const UpdateProfile = () => {
     }
   };
   return (
-    <div className="w-full p-3 md:h-screen lg:h-[calc(100vh-108px)] h-full flex items-center mx-auto">
+    <div className="w-full p-3 md:h-screen lg:h-[calc(100vh-68px)] h-full flex items-center mx-auto">
       <div className="bg-[#1e1e1e0b] mx-2 lg:p-12 p-6 md:p-8 w-[900px] md:mx-auto Lg:mx-auto min-h-[550px] rounded-2xl">
         <div className="mb-10">
           <h3 className=" font-semibold">Update Your Profile</h3>
@@ -38,7 +39,11 @@ const UpdateProfile = () => {
         </div>
 
         <div className="flex flex-col lg:flex-row gap-10">
-          <div className="h-[150px] w-[150px] mx-auto md:mx-0 lg:mx-0 rounded-[50%]">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="600"
+            className="h-[150px] w-[150px] mx-auto md:mx-0 lg:mx-0 rounded-[50%]"
+          >
             <img
               className="h-[150px] w-[150px] object-cover object-center mx-auto md:mx-0 lg:mx-0 rounded-[50%]"
               src={user?.photoURL ? user?.photoURL : userImg}
@@ -53,7 +58,8 @@ const UpdateProfile = () => {
             >
               <div
                 data-aos="fade-left"
-                data-aos-duration="1000"
+                data-aos-duration="600"
+                data-aos-once="true"
                 className="space-y-1 text-sm"
               >
                 <label className="block dark:text-gray-600">Your Name</label>
@@ -74,7 +80,8 @@ const UpdateProfile = () => {
               </div>
               <div
                 data-aos="fade-right"
-                data-aos-duration="1000"
+                data-aos-duration="600"
+                data-aos-once="true"
                 className="space-y-1 text-sm"
               >
                 <label className="block dark:text-gray-600">
@@ -90,7 +97,8 @@ const UpdateProfile = () => {
               </div>
               <div
                 data-aos="fade-left"
-                data-aos-duration="1000"
+                data-aos-duration="600"
+                data-aos-once="true"
                 className="space-y-1 text-sm"
               >
                 <label className="block dark:text-gray-600">Your Email</label>
@@ -102,7 +110,12 @@ const UpdateProfile = () => {
                   className="w-full px-4 py-3 rounded-md border-gray-300 outline-none border-[1px] dark:bg-gray-50 dark:text-gray-800 "
                 />
               </div>
-              <div data-aos="fade-right" data-aos-duration="1000" className="">
+              <div
+                data-aos="fade-right"
+                data-aos-duration="600"
+                data-aos-once="true"
+                className=""
+              >
                 <input
                   type="submit"
                   value="Save"

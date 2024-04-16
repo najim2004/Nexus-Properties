@@ -22,7 +22,7 @@ const Card = ({ item }) => {
       data-aos-duration="600"
       data-aos-delay={isLargeScreen != false ? 100 * id : 0}
     >
-      <div className="p-2 border-[1px] h-full flex flex-col border-gray-200 bg-[#f4e1d22d] rounded-lg">
+      <div className="p-2 shadow-lg border-[1px] h-full flex flex-col border-gray-200  rounded-lg">
         <div className="flex-grow h-full">
           <div className="w-full relative h-[250px] rounded-xl bg-gray-300 mb-4">
             <div className="absolute inset-0">
@@ -64,7 +64,7 @@ const Card = ({ item }) => {
           </p>
         </div>
         <Link to={`/details/${id}`} state={estate_title}>
-          <button className="w-full btn btn-sm h-10 mt-4 border-[2px] border-cmnBG bg-transparent rounded-[5px] text-cmnBG">
+          <button className="w-full btn btn-sm h-10 mt-4 border-[2px] bg-cmnBG  rounded-[5px] text-white">
             View Property
           </button>
         </Link>
