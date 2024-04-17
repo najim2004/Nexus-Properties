@@ -33,7 +33,7 @@ const Navbar = () => {
   // scroll check
   const [bgColor, setBgColor] = useState({});
   const handleScroll = () => {
-    if (window.scrollY > 100) {
+    if (window.scrollY > 30) {
       setBgColor({ backgroundColor: "#eaeaeadc", backdropFilter: "blur(8px)" });
     } else {
       setBgColor("");
@@ -48,7 +48,7 @@ const Navbar = () => {
     };
   }, []);
   return (
-    <div className="sticky top-0 z-50" style={{...bgColor}}>
+    <div className="sticky top-0 z-50" style={{ ...bgColor }}>
       <div className="max-w-[1300px] navbar mx-auto">
         <div className="navbar-start">
           <Link to={"/"} className="text-xl font-bold md:text-2xl lg:text-3xl">
