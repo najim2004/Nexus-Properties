@@ -7,8 +7,6 @@ const Estate = ({ estateRef }) => {
   const { data, dataLoading } = useContext(AuthContext);
   const [cardData, setCardData] = useState([]);
   const [showAll, setShowAll] = useState(false);
-  
-
 
   useEffect(() => {
     if (showAll) {
@@ -23,19 +21,30 @@ const Estate = ({ estateRef }) => {
       ref={estateRef}
     >
       <h3
+        id="estate"
         data-aos="fade-up"
         data-aos-duration="600"
-        className="text-center text-2xl md:text-4xl lg:text-4xl font-semibold mb-8"
+        className="text-center text-2xl md:text-4xl lg:text-4xl font-semibold mb-4"
       >
         Chose Your Home
       </h3>
+      <p
+        data-aos="fade-up"
+        data-aos-duration="600"
+        data-aos-anchor="#estate"
+        className="max-w-[800px] mx-auto text-center mb-10"
+      >
+        Choose Your Home empowers users in finding their ideal living space by
+        offering a diverse range of customizable options, from apartments to
+        houses, tailored to individual preferences and budgets.
+      </p>
       {dataLoading ? (
         <div className="w-full flex justify-center">
           <span className="loading size-[80px] text-cmnBG loading-infinity loading-lg"></span>
         </div>
       ) : (
         <div className="">
-          <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
             {cardData?.map((item) => (
               <Card key={item?.id} item={item}></Card>
             ))}

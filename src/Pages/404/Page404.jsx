@@ -8,7 +8,7 @@ const Page404 = () => {
       <div className="max-w-[500px]">
       <img className="w-full h-full" src={img404} alt="" />
       </div>
-      <Link to={-1} className="btn bg-gray-300 hover:!bg-[#EFBC9B] text-medium !border-none">Go Back</Link>
+      <Link to={-1} className="btn bg-cmnBG text-white text-lg font-bold text-medium !border-none">Back to Previous Page</Link>
     </div>
   );
 };

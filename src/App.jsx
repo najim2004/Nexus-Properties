@@ -14,12 +14,12 @@ function App() {
   const location = useLocation();
   useEffect(() => {
     if (location.pathname == "/") {
-      document.title = "Home";
+      document.title = "Nexus-Properties-" + "Home";
     } else {
-      document.title = location.pathname.split("/")[1];
+      document.title = "Nexus-Properties-" + location.pathname.split("/")[1];
     }
     if (location.state != null) {
-      document.title = location.state;
+      document.title = "Nexus-Properties-" + location.state;
     }
   }, [location.pathname]);
   return (

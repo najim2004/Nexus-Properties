@@ -46,7 +46,7 @@ const ContactUs = () => {
 
               <div className="font-lg flex text-gry-500 gap-2 font-medium mb-2 items-start">
                 <span className=" font-bold">Address:</span>
-                <p className="max-w-[150px]">
+                <p className="">
                   123 Main Street Springfield, Anytown, USA
                 </p>
               </div>
@@ -61,7 +61,7 @@ const ContactUs = () => {
           >
             <div className="contact-page bg-gray-100 p-6 rounded-2xl w-full">
               <h3 className="text-2xl font-semibold text-center">Message Us</h3>
-              <p className="my-4 text-justify">
+              <p className="my-4 text-center">
                 We'd love to hear from you! Whether you have a question,
                 suggestion, or just want to say hello, feel free to reach out to
                 us using the form below.

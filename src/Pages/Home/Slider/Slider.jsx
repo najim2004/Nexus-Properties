@@ -12,6 +12,7 @@ const Slider = ({ scrollHandler, estateRef }) => {
   const { data } = useContext(AuthContext);
   return (
     <div
+      id="slider"
       data-aos="zoom-in"
       className="max-w-[1300px] mx-auto mt-5 p-3  lg:p-0 rounded-2xl lg:mt-10 md:mt-8"
     >
@@ -65,20 +66,43 @@ const Slider = ({ scrollHandler, estateRef }) => {
         </Swiper>
         <div className="absolute z-10 w-full h-full top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2">
           <div className="relative w-full h-full flex flex-col items-center justify-center">
-            <h3 className="lg:text-6xl md:text-4xl w-[300px] md:w-auto lg:w-auto text-center text-3xl mb-3 lg:mb-6 md:mb-4 font-bold text-[#F4E1D2]">
+            <h3
+              data-aos="fade-right"
+              data-aos-anchor="#slider"
+              data-aos-duration="1000"
+              className="lg:text-6xl md:text-4xl w-[300px] md:w-auto lg:w-auto text-center text-3xl mb-3 lg:mb-6 md:mb-4 font-bold text-[#F4E1D2]"
+            >
               Discover Your New Home
             </h3>
-            <p className="text-xl text-center max-w-[500px] lg:max-w-[700px] text-[#F4E1D2]">
+            <p
+              data-aos="fade-left"
+              data-aos-duration="1000"
+              data-aos-anchor="#slider"
+              className="text-xl text-center max-w-[500px] lg:max-w-[700px] text-[#F4E1D2]"
+            >
               Explore our diverse range of residences tailored to your
               lifestyle, offering comfort, convenience, and lasting memories.
             </p>
-            <button
-              onClick={() => scrollHandler(estateRef)}
-              className="btn bg-[#b08868f1] font-medium  lg:text-lg border-none lg:h-14 mt-2 lg:mt-4 !rounded-[5px] hover: text-white lg:!font-bold"
+            <div
+              data-aos="fade-up"
+              data-aos-duration="600"
+              data-aos-delay="600"
+              data-aos-anchor="#slider"
             >
-              Explore Now
-            </button>
-            <div className="z-20 absolute flex  md:gap-4 gap-2 lg:gap-4 bottom-5 md:right-5 right-3 lg:right-5">
+              <button
+                onClick={() => scrollHandler(estateRef)}
+                className="btn bg-[#036aa1df] font-medium  lg:text-lg border-none lg:h-10 mt-2 lg:mt-4 !rounded-lg hover: text-white lg:!font-bold"
+              >
+                Explore Now
+              </button>
+            </div>
+            <div
+              data-aos="fade-right"
+              data-aos-duration="600"
+              data-aos-delay="600"
+              data-aos-anchor="#slider"
+              className="z-20 absolute flex  md:gap-4 gap-2 lg:gap-4 bottom-5 md:right-5 right-3 lg:right-5"
+            >
               <button className="btn !bg-transparent !border-none !p-0 prev-btn">
                 <img className="size-10 lg:size-auto" src={prevBtn} alt="" />
               </button>

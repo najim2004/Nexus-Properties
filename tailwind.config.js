@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       colors:{
-        cmnBG: "#b08968",
+        cmnBG: "#0369a1",
       },
     },
   },

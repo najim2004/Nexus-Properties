@@ -3,7 +3,6 @@ import Estate from "./Estate/Estate";
 import Slider from "./Slider/Slider";
 import ReviewSection from "./ReviewSection/ReviewSection";
 import Brokers from "./Brokers/Brokers";
-
 const Home = () => {
   const estateRef = useRef();
   const scrollHandler = (elmRef) => {

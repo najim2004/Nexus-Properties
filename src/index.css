@@ -24,8 +24,8 @@ body {
 }
 .n-menu a.active {
   background-color: transparent !important;
-  color: #b08968 !important;
-  border: 2px solid #b08968 !important;
+  color: #0369a1 !important;
+  border: 2px solid #0369a1 !important;
   font-weight: 600;
 }
 

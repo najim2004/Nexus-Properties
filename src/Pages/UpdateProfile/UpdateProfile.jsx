@@ -32,7 +32,10 @@ const UpdateProfile = () => {
   };
   return (
     <div className="w-full p-3 md:h-screen lg:h-[calc(100vh-68px)] h-full flex items-center mx-auto">
-      <div className="bg-[#1e1e1e0b] mx-2 lg:p-12 p-6 md:p-8 w-[900px] md:mx-auto Lg:mx-auto min-h-[550px] rounded-2xl">
+      <div
+        id="update"
+        className="bg-[#1e1e1e0b] mx-2 lg:p-12 p-6 md:p-8 w-[900px] md:mx-auto Lg:mx-auto min-h-[550px] rounded-2xl shadow-lg"
+      >
         <div className="mb-10">
           <h3 className=" font-semibold">Update Your Profile</h3>
           <hr className="h-[1px] bg-gray-400 mt-5" />
@@ -42,10 +45,11 @@ const UpdateProfile = () => {
           <div
             data-aos="fade-up"
             data-aos-duration="600"
+            data-aos-anchor="#update"
             className="h-[150px] w-[150px] mx-auto md:mx-0 lg:mx-0 rounded-[50%]"
           >
             <img
-              className="h-[150px] w-[150px] object-cover object-center mx-auto md:mx-0 lg:mx-0 rounded-[50%]"
+              className="h-[150px] w-[150px] transition-transform duration-300 transform hover:scale-150 object-cover object-center mx-auto md:mx-0 lg:mx-0 rounded-[50%]"
               src={user?.photoURL ? user?.photoURL : userImg}
               alt=""
             />
@@ -59,6 +63,7 @@ const UpdateProfile = () => {
               <div
                 data-aos="fade-left"
                 data-aos-duration="600"
+                data-aos-anchor="#update"
                 data-aos-once="true"
                 className="space-y-1 text-sm"
               >
@@ -81,6 +86,7 @@ const UpdateProfile = () => {
               <div
                 data-aos="fade-right"
                 data-aos-duration="600"
+                data-aos-anchor="#update"
                 data-aos-once="true"
                 className="space-y-1 text-sm"
               >
@@ -98,6 +104,7 @@ const UpdateProfile = () => {
               <div
                 data-aos="fade-left"
                 data-aos-duration="600"
+                data-aos-anchor="#update"
                 data-aos-once="true"
                 className="space-y-1 text-sm"
               >
@@ -113,6 +120,7 @@ const UpdateProfile = () => {
               <div
                 data-aos="fade-right"
                 data-aos-duration="600"
+                data-aos-anchor="#update"
                 data-aos-once="true"
                 className=""
               >
