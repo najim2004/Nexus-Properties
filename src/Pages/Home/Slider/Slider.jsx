@@ -101,7 +101,7 @@ const Slider = ({ scrollHandler, estateRef }) => {
               data-aos-duration="600"
               data-aos-delay="600"
               data-aos-anchor="#slider"
-              className="z-20 absolute flex  md:gap-4 gap-2 lg:gap-4 bottom-5 md:right-5 right-3 lg:right-5"
+              className="z-20 absolute flex  md:gap-4 gap-2 lg:gap-4 bottom-20 lg:bottom-5 md:right-5 right-3 lg:right-5"
             >
               <button className="btn !bg-transparent !border-none !p-0 prev-btn">
                 <img className="size-10 lg:size-auto" src={prevBtn} alt="" />
