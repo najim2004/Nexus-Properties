@@ -59,7 +59,7 @@ const ReviewSection = () => {
             <div className="max-w-[500px] shadow-lg overflow-hidden mx-auto flex flex-col  relative min-h-[300px] rounded-[20px] pt-6 lg:pt-10 bg-[#f9fafb]">
               <div className="flex-grow px-6 lg:px-10">
                 <FaQuoteLeft className="size-8 mb-4 text-[#0369a1]" />
-                <p className="text-[#000000b0]">{review?.review_description}</p>
+                <p className="text-[#000000b0] italic">{review?.review_description}</p>
               </div>
               <div className="mt-6 w-full h-[100px] bg-[#0369a1] text-white justify-center flex items-center gap-6">
                 <img

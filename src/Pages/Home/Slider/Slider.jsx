@@ -13,7 +13,6 @@ const Slider = ({ scrollHandler, estateRef }) => {
   return (
     <div
       id="slider"
-      data-aos="zoom-in"
       className="w-full h-screen relative -top-[71.2px]"
     >
       <div className="relative h-screen bg-gray-400">
