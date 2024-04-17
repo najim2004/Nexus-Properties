@@ -15,10 +15,13 @@ Welcome to Nexus Properties, where luxury meets convenience in the realm of real
 ## Features and Characteristics
 
 - **Exquisite User Experience**: Our website is meticulously crafted to provide an immersive and intuitive browsing experience for users at every step of their real estate journey.
+- **Exclusivity Redefined**: Nexus Properties offers access to an exclusive collection of high-end residential homes, setting new standards in luxury living.
 - **User Registration and Login**: Users can register for an account and log in to access additional features.
 - **Exclusive Access**: Unlock the door to a world of luxury properties by registering on Nexus Properties. Only registered users gain access to premium features and detailed estate information.
 - **Unrivaled Property Listings**: Explore an extensive collection of residential homes that redefine luxury living. From modern penthouses to serene countryside estates, we have something to suit every taste.
+- **Spectacular Bookmarking Feature**: Bookmark your favorite properties and create your own collection of dream homes. Your Nexus Properties account is your gateway to luxury at your fingertips.
 - **Personalized Profile Management**: Tailor your Nexus Properties experience to your preferences with our user-friendly profile management feature. Update your information, manage your bookmarks, and track your favorite properties effortlessly.
+- **Effortless Contact**: Connect with us anytime, anywhere through our dedicated Contact Us page. Your inquiries are our priority, and we're here to assist you every step of the way.
 - **Seamless Integration of Cutting-Edge Technologies**: Harnessing the power of React hooks, Swiper.js, and other innovative technologies, we deliver a website that not only meets but exceeds modern standards of excellence.
 
 ## NPM Packages Used
