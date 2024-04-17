@@ -4,6 +4,10 @@ Got it! Here's the updated README file with your repository link and your name:
 
 # Nexus Properties
 
+## Live Site
+
+Explore Nexus Properties live at: [Nexus Properties](https://home-haven-e41db.web.app/)
+
 ## Overview
 
 Welcome to Nexus Properties, where luxury meets convenience in the realm of real estate. Our platform is designed to provide a seamless experience for those seeking to buy or rent residential homes of exceptional quality. Below, you'll find a detailed overview of the features and characteristics of our website, along with information about the npm packages that power our platform.
@@ -27,10 +31,6 @@ Welcome to Nexus Properties, where luxury meets convenience in the realm of real
 - **react-icons**: Enhancing the visual aesthetics of our interface with a vast library of icons for every purpose.
 - **firebase**: Powering our platform with a reliable backend service for user authentication and database management.
 - **react-responsive**: Ensuring a consistent and delightful experience across devices with responsive design elements.
-
-## Live Site
-
-Explore Nexus Properties live at: [Nexus Properties](https://home-haven-e41db.web.app/)
 
 ## Installation
 
