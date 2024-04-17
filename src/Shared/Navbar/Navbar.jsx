@@ -31,12 +31,12 @@ const Navbar = () => {
       });
   };
   // scroll check
-  const [bgColor, setBgColor] = useState("#FFF");
+  const [bgColor, setBgColor] = useState({});
   const handleScroll = () => {
     if (window.scrollY > 100) {
-      setBgColor("#eaeaeadc");
+      setBgColor({ backgroundColor: "#eaeaeadc", backdropFilter: "blur(8px)" });
     } else {
-      setBgColor("#FFF");
+      setBgColor("");
     }
   };
 
@@ -48,10 +48,7 @@ const Navbar = () => {
     };
   }, []);
   return (
-    <div
-      className="sticky top-0 z-50"
-      style={{ backgroundColor: bgColor, backdropFilter: "blur(8px)" }}
-    >
+    <div className="sticky top-0 z-50" style={{...bgColor}}>
       <div className="max-w-[1300px] navbar mx-auto">
         <div className="navbar-start">
           <Link to={"/"} className="text-xl font-bold md:text-2xl lg:text-3xl">

@@ -18,7 +18,7 @@ const Bookmark = () => {
     removeBookmarked(parseInt(id));
   };
   return (
-    <div className="px-3 py-5 min-h-[calc(100vh-381.4px)] lg:min-h-[calc(100vh-367px)] flex flex-col justify-center">
+    <div className="px-3 py-5 min-h-[calc(100vh-371.4px)] lg:min-h-[calc(100vh-367px)] flex flex-col justify-center">
       <h3 className="text-center text-2xl md:text-4xl lg:text-4xl font-bold">Your Bookmarked</h3>
       <div className="w-full">
       <div className="max-w-[800px] min-h-[100px] grid grid-cols-1 gap-6 rounded-xl border-[1px] border-cmnBG p-5 mx-auto mt-5">

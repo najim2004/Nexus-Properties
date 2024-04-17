@@ -14,11 +14,11 @@ const Slider = ({ scrollHandler, estateRef }) => {
     <div
       id="slider"
       data-aos="zoom-in"
-      className="max-w-[1300px] mx-auto mt-5 p-3  lg:p-0 rounded-2xl lg:mt-10 md:mt-8"
+      className="w-full h-screen relative -top-[71.2px]"
     >
-      <div className="relative md:h-[400px] h-[350px] rounded-2xl lg:h-[550px] bg-gray-400">
+      <div className="relative h-screen bg-gray-400">
         <Swiper
-          className="rounded-2xl z-0 mySwiper"
+          className="z-0 mySwiper"
           loop={true}
           autoplay={{
             delay: 2000,
@@ -35,11 +35,11 @@ const Slider = ({ scrollHandler, estateRef }) => {
         >
           <SwiperSlide>
             <div
-              className="w-full bg-no-repeat bg-cover bg-center md:min-h-[400px] min-h-[350px] lg:min-h-[550px] relative rounded-2xl"
+              className="w-full bg-no-repeat bg-cover bg-center min-h-screen relative"
               style={{ backgroundImage: `url(${data[3]?.image})` }}
             >
               <div
-                className="absolute flex flex-col items-center justify-center inset-0 rounded-2xl"
+                className="absolute flex flex-col items-center justify-center inset-0"
                 style={{
                   background:
                     "linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.10) 100%)",
@@ -50,11 +50,11 @@ const Slider = ({ scrollHandler, estateRef }) => {
           {data?.slice(4, 6)?.map((item, index) => (
             <SwiperSlide key={index}>
               <div
-                className="w-full bg-no-repeat bg-cover bg-center md:min-h-[400px] min-h-[350px] lg:min-h-[550px] relative rounded-2xl"
+                className="w-full bg-no-repeat bg-cover bg-center min-h-screen relative "
                 style={{ backgroundImage: `url(${item?.image})` }}
               >
                 <div
-                  className="absolute flex flex-col items-center justify-center inset-0 rounded-2xl"
+                  className="absolute flex flex-col items-center justify-center inset-0"
                   style={{
                     background:
                       "linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.10) 100%)",

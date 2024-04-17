@@ -17,11 +17,6 @@ body {
   /* font-family: "Ubuntu", sans-serif; */
   font-family: "Signika Negative", sans-serif !important;
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 .n-menu a.active {
   background-color: transparent !important;
   color: #0369a1 !important;
