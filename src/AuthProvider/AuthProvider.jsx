@@ -93,7 +93,7 @@ const AuthProvider = ({ children }) => {
   const sweetLoginAlert = (title, img, time) => {
     return Swal.fire({
       imageUrl: img,
-      imageWidth: 150,
+      imageWidth: 120,
       title: title,
       timer: time,
       showConfirmButton: false,

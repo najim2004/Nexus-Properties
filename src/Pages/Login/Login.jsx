@@ -110,7 +110,7 @@ const Login = () => {
     <div
     data-aos="fade-up"
     data-aos-duration="600"
-    className="lg:h-[calc(100vh-68px)] md:h-[calc(100vh-60px)] h-full p-3 w-screen flex justify-center items-center">
+    className="lg:h-[calc(100vh-68px)] overflow-hidden md:h-[calc(100vh-60px)] h-full p-3 w-screen flex justify-center items-center">
       <div className="w-full  max-w-md p-8 space-y-3 lg:shadow-2xl border-[1px] border-purple-200 rounded-xl dark:bg-gray-50 dark:text-gray-800">
         <h1 className="text-2xl font-bold text-center">Login</h1>
 
@@ -177,7 +177,7 @@ const Login = () => {
           <input
             type="submit"
             value="Login"
-            className="w-full btn p-3 text-center rounded-sm dark:text-gray-50 bg-cmnBG"
+            className="w-full btn p-3 text-center rounded-sm text-white bg-cmnBG"
           />
         </form>
         {/* ................. from end here .................. */}
