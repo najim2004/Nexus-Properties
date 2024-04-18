@@ -127,7 +127,7 @@ const UpdateProfile = () => {
                 <input
                   type="submit"
                   value="Save"
-                  className="w-full !rounded-sm btn p-3 text-center dark:text-gray-50 bg-cmnBG"
+                  className="w-full !outline-none !rounded-sm btn p-3 text-center dark:text-gray-50 bg-cmnBG"
                 />
               </div>
             </form>

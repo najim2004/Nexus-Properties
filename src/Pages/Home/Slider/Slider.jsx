@@ -90,7 +90,7 @@ const Slider = ({ scrollHandler, estateRef }) => {
             >
               <button
                 onClick={() => scrollHandler(estateRef)}
-                className="btn bg-[#036aa1df] font-medium  lg:text-lg border-none lg:h-10 mt-2 lg:mt-4 !rounded-lg hover: text-white lg:!font-bold"
+                className="btn bg-[#036aa1df] outline-none font-medium  lg:text-lg border-none lg:h-10 mt-2 lg:mt-4 !rounded-lg hover: text-white lg:!font-bold"
               >
                 Explore Now
               </button>
