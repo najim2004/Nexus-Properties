@@ -31,7 +31,7 @@ const Card = ({ item }) => {
                   className="absolute right-2 top-2 bg-[#00000071] py-1 px-2 rounded-[5px] font-semibold text-white"
                   style={{ backdropFilter: "blur(2px)" }}
                 >
-                 For {status}
+                  For {status}
                 </h3>
                 <div
                   className="flex bg-[#00000060] justify-between w-full p-3 rounded-b-xl font-semibold text-white"
@@ -47,7 +47,7 @@ const Card = ({ item }) => {
             <img
               className="w-full z-0 transition-transform duration-300 transform group-hover:scale-110 h-full rounded-lg"
               src={image}
-              alt="loading"
+              alt="loading failed!"
             />
           </div>
           <h3 className="text-2xl mb-3 font-bold">{estate_title}</h3>
